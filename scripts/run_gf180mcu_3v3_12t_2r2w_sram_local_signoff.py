@@ -715,7 +715,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path("."))
     parser.add_argument("--final-manifest", type=Path, required=True)
-    parser.add_argument("--open-signoff-manifest", type=Path, required=True)
+    parser.add_argument(
+        "--legacy-staged-manifest",
+        type=Path,
+        default=None,
+        help="Optional legacy staged-signoff manifest. Current release packages are self-contained without it.",
+    )
     parser.add_argument("--primitive-manifest", type=Path, required=True)
     parser.add_argument("--stdcell-control-manifest", type=Path, default=Path("reports/stdcell_control_integration/MANIFEST.json"))
     parser.add_argument("--stdcell-placement-manifest", type=Path, default=Path("reports/stdcell_control_placement/MANIFEST.json"))
@@ -746,7 +751,6 @@ def main() -> int:
         final_macros = [item for item in final_macros if str(item["macro"]) in allowed]
         if not final_macros:
             raise SystemExit(f"no final macros matched --macro-filter={sorted(allowed)}")
-    open_manifest = load_json(args.open_signoff_manifest)
     checks: list[Check] = []
     tool_runs: dict[str, Any] = {
         "magic_pex": {},
@@ -754,14 +758,16 @@ def main() -> int:
         "klayout_antenna": {},
     }
 
-    add(
-        checks,
-        "Staged signoff",
-        "Prior staged signoff manifest",
-        "PASS" if open_manifest.get("overall_status") in {"PASS", "WARN"} else "FAIL",
-        args.open_signoff_manifest,
-        "historical staged manifest loaded; current local gate supersedes it",
-    )
+    if args.legacy_staged_manifest is not None:
+        staged_manifest = load_json(args.legacy_staged_manifest)
+        add(
+            checks,
+            "Legacy staged signoff",
+            "Prior staged signoff manifest",
+            "PASS" if staged_manifest.get("overall_status") in {"PASS", "WARN"} else "FAIL",
+            args.legacy_staged_manifest,
+            "legacy staged manifest loaded for comparison only; current local gate supersedes it",
+        )
 
     total_prims, primitive_fails, primitive_details = primitive_lvs_summary(args.primitive_manifest)
     add(

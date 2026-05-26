@@ -1,7 +1,7 @@
 {
   "cap_source": "openrcx_geometry_fallback",
   "cap_timing_status": "WARN",
-  "created_utc": "2026-05-25T22:58:08.392284+00:00",
+  "created_utc": "2026-05-26T01:00:02.614981+00:00",
   "files": [
     {
       "bytes": 136,
@@ -12,11 +12,11 @@
       "path": "LICENSE"
     },
     {
-      "bytes": 141827,
+      "bytes": 147965,
       "path": "MANIFEST.json"
     },
     {
-      "bytes": 10775,
+      "bytes": 10798,
       "path": "README.md"
     },
     {
@@ -1312,223 +1312,7 @@
       "path": "reports/full_control_arrays_reference/summary.md"
     },
     {
-      "bytes": 2255,
-      "path": "reports/full_gds_lvs_pex/MANIFEST.json"
-    },
-    {
-      "bytes": 545,
-      "path": "reports/full_gds_lvs_pex/README.md"
-    },
-    {
-      "bytes": 117447,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.ext"
-    },
-    {
-      "bytes": 3340,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/detronyx_12t_precharge_sense_rc1.ext"
-    },
-    {
-      "bytes": 6427,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/detronyx_12t_write_driver_rc1.ext"
-    },
-    {
-      "bytes": 245320,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_3v3_12t_2r2w_sram_512x8.ext"
-    },
-    {
-      "bytes": 0,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_3v3_12t_2r2w_sram_512x8.res.ext"
-    },
-    {
-      "bytes": 1458215,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_3v3_12t_2r2w_sram_512x8_array_control_core.ext"
-    },
-    {
-      "bytes": 7833,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_3v3_12t_2r2w_sram_512x8_column_periphery_routes.ext"
-    },
-    {
-      "bytes": 533,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_3v3_12t_2r2w_sram_512x8_stdcell_control_signal_routes.ext"
-    },
-    {
-      "bytes": 2044,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_as_sc_mcu7t3v3__inv_2.ext"
-    },
-    {
-      "bytes": 2817,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_as_sc_mcu7t3v3__nand2_2.ext"
-    },
-    {
-      "bytes": 3599,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_as_sc_mcu7t3v3__nand3_2.ext"
-    },
-    {
-      "bytes": 4389,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_as_sc_mcu7t3v3__nand4_2.ext"
-    },
-    {
-      "bytes": 2823,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_as_sc_mcu7t3v3__nor2_2.ext"
-    },
-    {
-      "bytes": 20,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.magic_full_gds_pex.log"
-    },
-    {
-      "bytes": 152,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.magic_full_gds_pex.steps.log"
-    },
-    {
-      "bytes": 1193,
-      "path": "reports/full_gds_lvs_pex/gf180mcu_3v3_12t_2r2w_sram_512x8/run_full_gds_extract_pex.tcl"
-    },
-    {
-      "bytes": 2294,
-      "path": "reports/full_gds_lvs_pex_no_rc/MANIFEST.json"
-    },
-    {
-      "bytes": 553,
-      "path": "reports/full_gds_lvs_pex_no_rc/README.md"
-    },
-    {
-      "bytes": 117447,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.ext"
-    },
-    {
-      "bytes": 3914,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/detronyx_12t_precharge_sense_rc1.ext"
-    },
-    {
-      "bytes": 6881,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/detronyx_12t_write_driver_rc1.ext"
-    },
-    {
-      "bytes": 250270,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_3v3_12t_2r2w_sram_512x8.ext"
-    },
-    {
-      "bytes": 1458215,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_3v3_12t_2r2w_sram_512x8_array_control_core.ext"
-    },
-    {
-      "bytes": 12455,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_3v3_12t_2r2w_sram_512x8_column_periphery_routes.ext"
-    },
-    {
-      "bytes": 533,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_3v3_12t_2r2w_sram_512x8_stdcell_control_signal_routes.ext"
-    },
-    {
-      "bytes": 2044,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_as_sc_mcu7t3v3__inv_2.ext"
-    },
-    {
-      "bytes": 2817,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_as_sc_mcu7t3v3__nand2_2.ext"
-    },
-    {
-      "bytes": 3599,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_as_sc_mcu7t3v3__nand3_2.ext"
-    },
-    {
-      "bytes": 4389,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_as_sc_mcu7t3v3__nand4_2.ext"
-    },
-    {
-      "bytes": 2823,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles/gf180mcu_as_sc_mcu7t3v3__nor2_2.ext"
-    },
-    {
-      "bytes": 608050,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.full_gds.current_pdk.spice"
-    },
-    {
-      "bytes": 8359,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.magic_full_gds_pex.log"
-    },
-    {
-      "bytes": 171,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.magic_full_gds_pex.steps.log"
-    },
-    {
-      "bytes": 708,
-      "path": "reports/full_gds_lvs_pex_no_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/run_full_gds_extract_pex.tcl"
-    },
-    {
-      "bytes": 2399,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/MANIFEST.json"
-    },
-    {
-      "bytes": 573,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/README.md"
-    },
-    {
-      "bytes": 117447,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.ext"
-    },
-    {
-      "bytes": 3914,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/detronyx_12t_precharge_sense_rc1.ext"
-    },
-    {
-      "bytes": 6881,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/detronyx_12t_write_driver_rc1.ext"
-    },
-    {
-      "bytes": 1812626,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_3v3_12t_2r2w_sram_1024x32.ext"
-    },
-    {
-      "bytes": 6222137,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_3v3_12t_2r2w_sram_1024x32_array_control_core.ext"
-    },
-    {
-      "bytes": 48047,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_3v3_12t_2r2w_sram_1024x32_column_periphery_routes.ext"
-    },
-    {
-      "bytes": 533,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_3v3_12t_2r2w_sram_1024x32_stdcell_control_signal_routes.ext"
-    },
-    {
-      "bytes": 2044,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_as_sc_mcu7t3v3__inv_2.ext"
-    },
-    {
-      "bytes": 2817,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_as_sc_mcu7t3v3__nand2_2.ext"
-    },
-    {
-      "bytes": 3599,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_as_sc_mcu7t3v3__nand3_2.ext"
-    },
-    {
-      "bytes": 4389,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_as_sc_mcu7t3v3__nand4_2.ext"
-    },
-    {
-      "bytes": 2823,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_as_sc_mcu7t3v3__nor2_2.ext"
-    },
-    {
-      "bytes": 6948518,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.full_gds.current_pdk.spice"
-    },
-    {
-      "bytes": 8589,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.magic_full_gds_pex.log"
-    },
-    {
-      "bytes": 171,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.magic_full_gds_pex.steps.log"
-    },
-    {
-      "bytes": 708,
-      "path": "reports/full_gds_lvs_pex_no_rc_1024x32_long/gf180mcu_3v3_12t_2r2w_sram_1024x32/run_full_gds_extract_pex.tcl"
-    },
-    {
-      "bytes": 7104,
+      "bytes": 7088,
       "path": "reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json"
     },
     {
@@ -1792,7 +1576,7 @@
       "path": "reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_512x8/run_full_gds_extract_pex.tcl"
     },
     {
-      "bytes": 2350,
+      "bytes": 2334,
       "path": "reports/full_gds_lvs_pex_power_rc/MANIFEST.json"
     },
     {
@@ -1872,135 +1656,11 @@
       "path": "reports/full_gds_lvs_pex_power_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/run_full_gds_extract_pex.tcl"
     },
     {
-      "bytes": 15111,
-      "path": "reports/local_signoff/MANIFEST.json"
-    },
-    {
-      "bytes": 9400,
-      "path": "reports/local_signoff/README.md"
-    },
-    {
-      "bytes": 43987,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/extfiles/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.ext"
-    },
-    {
-      "bytes": 608391,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/extfiles/gf180mcu_3v3_12t_2r2w_sram_1024x32.ext"
-    },
-    {
-      "bytes": 331275,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/extfiles/gf180mcu_3v3_12t_2r2w_sram_1024x32.res.ext"
-    },
-    {
-      "bytes": 1884784,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice"
-    },
-    {
-      "bytes": 2009098,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk_rc.spice"
-    },
-    {
-      "bytes": 2391732,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/gf180mcu_3v3_12t_2r2w_sram_1024x32.magic_pex.log"
-    },
-    {
-      "bytes": 723,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/run_extract_pex.tcl"
-    },
-    {
-      "bytes": 43987,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/extfiles/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.ext"
-    },
-    {
-      "bytes": 195572,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/extfiles/gf180mcu_3v3_12t_2r2w_sram_1024x8.ext"
-    },
-    {
-      "bytes": 81153,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/extfiles/gf180mcu_3v3_12t_2r2w_sram_1024x8.res.ext"
-    },
-    {
-      "bytes": 487386,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice"
-    },
-    {
-      "bytes": 516879,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk_rc.spice"
-    },
-    {
-      "bytes": 589628,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/gf180mcu_3v3_12t_2r2w_sram_1024x8.magic_pex.log"
-    },
-    {
-      "bytes": 723,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/run_extract_pex.tcl"
-    },
-    {
-      "bytes": 43987,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/extfiles/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.ext"
-    },
-    {
-      "bytes": 319499,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/extfiles/gf180mcu_3v3_12t_2r2w_sram_512x32.ext"
-    },
-    {
-      "bytes": 164156,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/extfiles/gf180mcu_3v3_12t_2r2w_sram_512x32.res.ext"
-    },
-    {
-      "bytes": 953922,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice"
-    },
-    {
-      "bytes": 1014733,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk_rc.spice"
-    },
-    {
-      "bytes": 1191922,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/gf180mcu_3v3_12t_2r2w_sram_512x32.magic_pex.log"
-    },
-    {
-      "bytes": 723,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/run_extract_pex.tcl"
-    },
-    {
-      "bytes": 43987,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/extfiles/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.ext"
-    },
-    {
-      "bytes": 104477,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/extfiles/gf180mcu_3v3_12t_2r2w_sram_512x8.ext"
-    },
-    {
-      "bytes": 40899,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/extfiles/gf180mcu_3v3_12t_2r2w_sram_512x8.res.ext"
-    },
-    {
-      "bytes": 254636,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice"
-    },
-    {
-      "bytes": 269487,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk_rc.spice"
-    },
-    {
-      "bytes": 297968,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/gf180mcu_3v3_12t_2r2w_sram_512x8.magic_pex.log"
-    },
-    {
-      "bytes": 723,
-      "path": "reports/local_signoff/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/run_extract_pex.tcl"
-    },
-    {
-      "bytes": 8767,
-      "path": "reports/local_signoff/summary.csv"
-    },
-    {
-      "bytes": 20648,
+      "bytes": 20438,
       "path": "reports/local_signoff_full/MANIFEST.json"
     },
     {
-      "bytes": 11071,
+      "bytes": 10898,
       "path": "reports/local_signoff_full/README.md"
     },
     {
@@ -2180,152 +1840,144 @@
       "path": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/run_extract_pex.tcl"
     },
     {
-      "bytes": 10088,
+      "bytes": 9934,
       "path": "reports/local_signoff_full/summary.csv"
     },
     {
-      "bytes": 7532,
+      "bytes": 7764,
       "path": "reports/lvs_gate/MANIFEST.json"
     },
     {
-      "bytes": 1754,
+      "bytes": 1762,
       "path": "reports/lvs_gate/README.md"
     },
     {
-      "bytes": 1862245,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/layout/layout.current_pdk.spice"
+      "bytes": 1884784,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/layout/layout.current_pdk.spice"
     },
     {
-      "bytes": 1833649,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.layout_blackbox.spice"
+      "bytes": 23208,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.independent_reference.cdl"
     },
     {
-      "bytes": 46848,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.macro_top.netgen_lvs.log"
+      "bytes": 4914,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_lvs.log"
     },
     {
-      "bytes": 2559,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.macro_top.netgen_stdout.log"
+      "bytes": 4630,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_stdout.log"
     },
     {
-      "bytes": 1833653,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.reference_blackbox.cdl"
+      "bytes": 1856200,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.layout_blackbox.spice"
     },
     {
-      "bytes": 27335,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_4x4_tile.independent_reference.cdl"
+      "bytes": 47812,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.macro_top.netgen_lvs.log"
     },
     {
-      "bytes": 4892,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_4x4_tile.netgen_lvs.log"
+      "bytes": 2659,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.macro_top.netgen_stdout.log"
     },
     {
-      "bytes": 4519,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_4x4_tile.netgen_stdout.log"
+      "bytes": 1856204,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.reference_blackbox.cdl"
     },
     {
-      "bytes": 481745,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/layout/layout.current_pdk.spice"
+      "bytes": 487386,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/layout/layout.current_pdk.spice"
     },
     {
-      "bytes": 459295,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.layout_blackbox.spice"
+      "bytes": 23208,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.independent_reference.cdl"
     },
     {
-      "bytes": 24628,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.macro_top.netgen_lvs.log"
+      "bytes": 4914,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_lvs.log"
     },
     {
-      "bytes": 2532,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.macro_top.netgen_stdout.log"
+      "bytes": 4620,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_stdout.log"
     },
     {
-      "bytes": 459299,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.reference_blackbox.cdl"
+      "bytes": 464950,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.layout_blackbox.spice"
     },
     {
-      "bytes": 27335,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_4x4_tile.independent_reference.cdl"
+      "bytes": 25592,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.macro_top.netgen_lvs.log"
     },
     {
-      "bytes": 4892,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_4x4_tile.netgen_lvs.log"
+      "bytes": 2632,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.macro_top.netgen_stdout.log"
     },
     {
-      "bytes": 4509,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_4x4_tile.netgen_stdout.log"
+      "bytes": 464954,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.reference_blackbox.cdl"
     },
     {
-      "bytes": 942647,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/layout/layout.current_pdk.spice"
+      "bytes": 953922,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/layout/layout.current_pdk.spice"
     },
     {
-      "bytes": 27335,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_4x4_tile.independent_reference.cdl"
+      "bytes": 23208,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.independent_reference.cdl"
     },
     {
-      "bytes": 4892,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_4x4_tile.netgen_lvs.log"
+      "bytes": 4914,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_lvs.log"
     },
     {
-      "bytes": 4509,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_4x4_tile.netgen_stdout.log"
+      "bytes": 4620,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_stdout.log"
     },
     {
-      "bytes": 918143,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.layout_blackbox.spice"
+      "bytes": 929430,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.layout_blackbox.spice"
     },
     {
-      "bytes": 45596,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.macro_top.netgen_lvs.log"
+      "bytes": 46560,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.macro_top.netgen_lvs.log"
     },
     {
-      "bytes": 2540,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.macro_top.netgen_stdout.log"
+      "bytes": 2640,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.macro_top.netgen_stdout.log"
     },
     {
-      "bytes": 918147,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.reference_blackbox.cdl"
+      "bytes": 929434,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.reference_blackbox.cdl"
     },
     {
-      "bytes": 251809,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/layout/layout.current_pdk.spice"
+      "bytes": 254636,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/layout/layout.current_pdk.spice"
     },
     {
-      "bytes": 27335,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_4x4_tile.independent_reference.cdl"
+      "bytes": 23208,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.independent_reference.cdl"
     },
     {
-      "bytes": 4892,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_4x4_tile.netgen_lvs.log"
+      "bytes": 4914,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_lvs.log"
     },
     {
-      "bytes": 4499,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_4x4_tile.netgen_stdout.log"
+      "bytes": 4610,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_stdout.log"
     },
     {
-      "bytes": 230383,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.layout_blackbox.spice"
+      "bytes": 233222,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.layout_blackbox.spice"
     },
     {
-      "bytes": 23576,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.macro_top.netgen_lvs.log"
+      "bytes": 24540,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.macro_top.netgen_lvs.log"
     },
     {
-      "bytes": 2513,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.macro_top.netgen_stdout.log"
+      "bytes": 2613,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.macro_top.netgen_stdout.log"
     },
     {
-      "bytes": 230387,
-      "path": "reports/lvs_gate/build_pin_lvs_pex_signoff_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.reference_blackbox.cdl"
-    },
-    {
-      "bytes": 21472,
-      "path": "reports/open_signoff/MANIFEST.json"
-    },
-    {
-      "bytes": 15268,
-      "path": "reports/open_signoff/README.md"
+      "bytes": 233226,
+      "path": "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.reference_blackbox.cdl"
     },
     {
       "bytes": 9811,
@@ -2644,98 +2296,6 @@
       "path": "reports/periphery_block_leaves/summary.md"
     },
     {
-      "bytes": 17155,
-      "path": "reports/pin_lvs_pex_signoff/MANIFEST.json"
-    },
-    {
-      "bytes": 8290,
-      "path": "reports/pin_lvs_pex_signoff/README.md"
-    },
-    {
-      "bytes": 7155,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x32/antenna/gf180mcu_3v3_12t_2r2w_sram_1024x32.antenna.log"
-    },
-    {
-      "bytes": 4498,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x32/density/gf180mcu_3v3_12t_2r2w_sram_1024x32.density.log"
-    },
-    {
-      "bytes": 1862245,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice"
-    },
-    {
-      "bytes": 1986559,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk_rc.spice"
-    },
-    {
-      "bytes": 2391578,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/gf180mcu_3v3_12t_2r2w_sram_1024x32.magic_pex.log"
-    },
-    {
-      "bytes": 7103,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x8/antenna/gf180mcu_3v3_12t_2r2w_sram_1024x8.antenna.log"
-    },
-    {
-      "bytes": 4450,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x8/density/gf180mcu_3v3_12t_2r2w_sram_1024x8.density.log"
-    },
-    {
-      "bytes": 481745,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice"
-    },
-    {
-      "bytes": 511238,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk_rc.spice"
-    },
-    {
-      "bytes": 589474,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/gf180mcu_3v3_12t_2r2w_sram_1024x8.magic_pex.log"
-    },
-    {
-      "bytes": 7126,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_512x32/antenna/gf180mcu_3v3_12t_2r2w_sram_512x32.antenna.log"
-    },
-    {
-      "bytes": 4460,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_512x32/density/gf180mcu_3v3_12t_2r2w_sram_512x32.density.log"
-    },
-    {
-      "bytes": 942647,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice"
-    },
-    {
-      "bytes": 1003458,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk_rc.spice"
-    },
-    {
-      "bytes": 1191768,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/gf180mcu_3v3_12t_2r2w_sram_512x32.magic_pex.log"
-    },
-    {
-      "bytes": 7072,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_512x8/antenna/gf180mcu_3v3_12t_2r2w_sram_512x8.antenna.log"
-    },
-    {
-      "bytes": 4444,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_512x8/density/gf180mcu_3v3_12t_2r2w_sram_512x8.density.log"
-    },
-    {
-      "bytes": 251809,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice"
-    },
-    {
-      "bytes": 266660,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk_rc.spice"
-    },
-    {
-      "bytes": 297814,
-      "path": "reports/pin_lvs_pex_signoff/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/gf180mcu_3v3_12t_2r2w_sram_512x8.magic_pex.log"
-    },
-    {
-      "bytes": 7668,
-      "path": "reports/pin_lvs_pex_signoff/summary.csv"
-    },
-    {
       "bytes": 3498,
       "path": "reports/row_edge_budget/MANIFEST.json"
     },
@@ -2944,7 +2504,7 @@
       "path": "reports/stdcell_row_select_placement/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.stdcell_full_control_matrix.cdl"
     },
     {
-      "bytes": 3895,
+      "bytes": 4174,
       "path": "scripts/README.md"
     },
     {
@@ -3024,11 +2584,11 @@
       "path": "scripts/route_gf180mcu_3v3_12t_2r2w_sram_control_signals.rb"
     },
     {
-      "bytes": 14297,
+      "bytes": 14281,
       "path": "scripts/run_gf180mcu_3v3_12t_2r2w_sram_full_gds_lvs_pex.py"
     },
     {
-      "bytes": 40867,
+      "bytes": 41124,
       "path": "scripts/run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py"
     },
     {
@@ -3100,7 +2660,7 @@
       "path": "verification/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate.py"
     },
     {
-      "bytes": 6831,
+      "bytes": 7446,
       "path": "verification/gf180mcu_3v3_12t_2r2w_sram_connectivity_check.py"
     },
     {
@@ -3112,11 +2672,11 @@
       "path": "verification/gf180mcu_3v3_12t_2r2w_sram_lvs_common.py"
     },
     {
-      "bytes": 20869,
+      "bytes": 20852,
       "path": "verification/gf180mcu_3v3_12t_2r2w_sram_lvs_gate.py"
     },
     {
-      "bytes": 12284,
+      "bytes": 12390,
       "path": "verification/gf180mcu_3v3_12t_2r2w_sram_macro_lvs.py"
     },
     {
@@ -3144,7 +2704,7 @@
       "path": "verification/gf180mcu_3v3_12t_2r2w_sram_stdcell_placement_gate.py"
     },
     {
-      "bytes": 8472,
+      "bytes": 8552,
       "path": "verification/gf180mcu_3v3_12t_2r2w_sram_tile_lvs.py"
     },
     {
@@ -3192,6 +2752,214 @@
       "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate/gf180mcu_3v3_12t_2r2w_sram_512x8.m5_power_short_audit.stderr.log"
     },
     {
+      "bytes": 8404,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/MANIFEST.json"
+    },
+    {
+      "bytes": 1762,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/README.md"
+    },
+    {
+      "bytes": 1884784,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/layout/layout.current_pdk.spice"
+    },
+    {
+      "bytes": 23208,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.independent_reference.cdl"
+    },
+    {
+      "bytes": 4914,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_lvs.log"
+    },
+    {
+      "bytes": 4830,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_stdout.log"
+    },
+    {
+      "bytes": 1856200,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.layout_blackbox.spice"
+    },
+    {
+      "bytes": 47812,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.macro_top.netgen_lvs.log"
+    },
+    {
+      "bytes": 2859,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.macro_top.netgen_stdout.log"
+    },
+    {
+      "bytes": 1856204,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.reference_blackbox.cdl"
+    },
+    {
+      "bytes": 487386,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/layout/layout.current_pdk.spice"
+    },
+    {
+      "bytes": 23208,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.independent_reference.cdl"
+    },
+    {
+      "bytes": 4914,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_lvs.log"
+    },
+    {
+      "bytes": 4820,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_stdout.log"
+    },
+    {
+      "bytes": 464950,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.layout_blackbox.spice"
+    },
+    {
+      "bytes": 25592,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.macro_top.netgen_lvs.log"
+    },
+    {
+      "bytes": 2832,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.macro_top.netgen_stdout.log"
+    },
+    {
+      "bytes": 464954,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.reference_blackbox.cdl"
+    },
+    {
+      "bytes": 953922,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/layout/layout.current_pdk.spice"
+    },
+    {
+      "bytes": 23208,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.independent_reference.cdl"
+    },
+    {
+      "bytes": 4914,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_lvs.log"
+    },
+    {
+      "bytes": 4820,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_stdout.log"
+    },
+    {
+      "bytes": 929430,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.layout_blackbox.spice"
+    },
+    {
+      "bytes": 46560,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.macro_top.netgen_lvs.log"
+    },
+    {
+      "bytes": 2840,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.macro_top.netgen_stdout.log"
+    },
+    {
+      "bytes": 929434,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.reference_blackbox.cdl"
+    },
+    {
+      "bytes": 254636,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/layout/layout.current_pdk.spice"
+    },
+    {
+      "bytes": 23208,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.independent_reference.cdl"
+    },
+    {
+      "bytes": 4914,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_lvs.log"
+    },
+    {
+      "bytes": 4810,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_stdout.log"
+    },
+    {
+      "bytes": 233222,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.layout_blackbox.spice"
+    },
+    {
+      "bytes": 24540,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.macro_top.netgen_lvs.log"
+    },
+    {
+      "bytes": 2813,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.macro_top.netgen_stdout.log"
+    },
+    {
+      "bytes": 233226,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.reference_blackbox.cdl"
+    },
+    {
+      "bytes": 6324,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/MANIFEST.json"
+    },
+    {
+      "bytes": 893,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/README.md"
+    },
+    {
+      "bytes": 1856200,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.layout_blackbox.spice"
+    },
+    {
+      "bytes": 47812,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.macro_top.netgen_lvs.log"
+    },
+    {
+      "bytes": 2864,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.macro_top.netgen_stdout.log"
+    },
+    {
+      "bytes": 1856204,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x32.reference_blackbox.cdl"
+    },
+    {
+      "bytes": 464950,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.layout_blackbox.spice"
+    },
+    {
+      "bytes": 25592,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.macro_top.netgen_lvs.log"
+    },
+    {
+      "bytes": 2837,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.macro_top.netgen_stdout.log"
+    },
+    {
+      "bytes": 464954,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.reference_blackbox.cdl"
+    },
+    {
+      "bytes": 929430,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.layout_blackbox.spice"
+    },
+    {
+      "bytes": 46560,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.macro_top.netgen_lvs.log"
+    },
+    {
+      "bytes": 2845,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.macro_top.netgen_stdout.log"
+    },
+    {
+      "bytes": 929434,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x32.reference_blackbox.cdl"
+    },
+    {
+      "bytes": 233222,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.layout_blackbox.spice"
+    },
+    {
+      "bytes": 24540,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.macro_top.netgen_lvs.log"
+    },
+    {
+      "bytes": 2818,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.macro_top.netgen_stdout.log"
+    },
+    {
+      "bytes": 233226,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_macro_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_512x8.reference_blackbox.cdl"
+    },
+    {
       "bytes": 6884,
       "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_row_select_gds_gate/MANIFEST.json"
     },
@@ -3232,8 +3000,224 @@
       "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_stdcell_placement_gate/README.md"
     },
     {
+      "bytes": 5694,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/MANIFEST.json"
+    },
+    {
+      "bytes": 976,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/README.md"
+    },
+    {
+      "bytes": 1884784,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/layout/layout.current_pdk.spice"
+    },
+    {
+      "bytes": 23287,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.independent_reference.cdl"
+    },
+    {
+      "bytes": 4914,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_lvs.log"
+    },
+    {
+      "bytes": 4830,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x32_pex_gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_stdout.log"
+    },
+    {
+      "bytes": 487386,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/layout/layout.current_pdk.spice"
+    },
+    {
+      "bytes": 23287,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.independent_reference.cdl"
+    },
+    {
+      "bytes": 4914,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_lvs.log"
+    },
+    {
+      "bytes": 4820,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_stdout.log"
+    },
+    {
+      "bytes": 953922,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/layout/layout.current_pdk.spice"
+    },
+    {
+      "bytes": 23287,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.independent_reference.cdl"
+    },
+    {
+      "bytes": 4914,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_lvs.log"
+    },
+    {
+      "bytes": 4820,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x32_pex_gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_stdout.log"
+    },
+    {
+      "bytes": 254636,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/layout/layout.current_pdk.spice"
+    },
+    {
+      "bytes": 23287,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.independent_reference.cdl"
+    },
+    {
+      "bytes": 4914,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_lvs.log"
+    },
+    {
+      "bytes": 4810,
+      "path": "verification/results/gf180mcu_3v3_12t_2r2w_sram_tile_lvs/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_512x8_pex_gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice/lvs/detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.netgen_stdout.log"
+    },
+    {
       "bytes": 7404,
       "path": "verification/results/results.json"
+    },
+    {
+      "bytes": 1317,
+      "path": "verification/results/spice/disabled_write_hold_ff_3p30v.log"
+    },
+    {
+      "bytes": 1212,
+      "path": "verification/results/spice/disabled_write_hold_ff_3p30v.spice"
+    },
+    {
+      "bytes": 1317,
+      "path": "verification/results/spice/disabled_write_hold_ss_3p30v.log"
+    },
+    {
+      "bytes": 1212,
+      "path": "verification/results/spice/disabled_write_hold_ss_3p30v.spice"
+    },
+    {
+      "bytes": 1321,
+      "path": "verification/results/spice/disabled_write_hold_typical_3p30v.log"
+    },
+    {
+      "bytes": 1217,
+      "path": "verification/results/spice/disabled_write_hold_typical_3p30v.spice"
+    },
+    {
+      "bytes": 1382,
+      "path": "verification/results/spice/dual_read_disturb_ff_3p30v.log"
+    },
+    {
+      "bytes": 1201,
+      "path": "verification/results/spice/dual_read_disturb_ff_3p30v.spice"
+    },
+    {
+      "bytes": 1381,
+      "path": "verification/results/spice/dual_read_disturb_ss_3p30v.log"
+    },
+    {
+      "bytes": 1201,
+      "path": "verification/results/spice/dual_read_disturb_ss_3p30v.spice"
+    },
+    {
+      "bytes": 1387,
+      "path": "verification/results/spice/dual_read_disturb_typical_3p30v.log"
+    },
+    {
+      "bytes": 1206,
+      "path": "verification/results/spice/dual_read_disturb_typical_3p30v.spice"
+    },
+    {
+      "bytes": 1328,
+      "path": "verification/results/spice/same_cell_conflict_observation_typical_3p30v.log"
+    },
+    {
+      "bytes": 1096,
+      "path": "verification/results/spice/same_cell_conflict_observation_typical_3p30v.spice"
+    },
+    {
+      "bytes": 1385,
+      "path": "verification/results/spice/same_data_dual_write_ff_3p30v.log"
+    },
+    {
+      "bytes": 1450,
+      "path": "verification/results/spice/same_data_dual_write_ff_3p30v.spice"
+    },
+    {
+      "bytes": 1385,
+      "path": "verification/results/spice/same_data_dual_write_ss_3p30v.log"
+    },
+    {
+      "bytes": 1450,
+      "path": "verification/results/spice/same_data_dual_write_ss_3p30v.spice"
+    },
+    {
+      "bytes": 1390,
+      "path": "verification/results/spice/same_data_dual_write_typical_3p30v.log"
+    },
+    {
+      "bytes": 1455,
+      "path": "verification/results/spice/same_data_dual_write_typical_3p30v.spice"
+    },
+    {
+      "bytes": 1602,
+      "path": "verification/results/spice/write_read_retention_ff_3p30v.log"
+    },
+    {
+      "bytes": 1609,
+      "path": "verification/results/spice/write_read_retention_ff_3p30v.spice"
+    },
+    {
+      "bytes": 1602,
+      "path": "verification/results/spice/write_read_retention_ss_3p30v.log"
+    },
+    {
+      "bytes": 1609,
+      "path": "verification/results/spice/write_read_retention_ss_3p30v.spice"
+    },
+    {
+      "bytes": 1607,
+      "path": "verification/results/spice/write_read_retention_typical_1p62v.log"
+    },
+    {
+      "bytes": 1615,
+      "path": "verification/results/spice/write_read_retention_typical_1p62v.spice"
+    },
+    {
+      "bytes": 1607,
+      "path": "verification/results/spice/write_read_retention_typical_1p80v.log"
+    },
+    {
+      "bytes": 1614,
+      "path": "verification/results/spice/write_read_retention_typical_1p80v.spice"
+    },
+    {
+      "bytes": 1607,
+      "path": "verification/results/spice/write_read_retention_typical_2p50v.log"
+    },
+    {
+      "bytes": 1614,
+      "path": "verification/results/spice/write_read_retention_typical_2p50v.spice"
+    },
+    {
+      "bytes": 1607,
+      "path": "verification/results/spice/write_read_retention_typical_3p00v.log"
+    },
+    {
+      "bytes": 1612,
+      "path": "verification/results/spice/write_read_retention_typical_3p00v.spice"
+    },
+    {
+      "bytes": 1607,
+      "path": "verification/results/spice/write_read_retention_typical_3p30v.log"
+    },
+    {
+      "bytes": 1614,
+      "path": "verification/results/spice/write_read_retention_typical_3p30v.spice"
+    },
+    {
+      "bytes": 1607,
+      "path": "verification/results/spice/write_read_retention_typical_3p60v.log"
+    },
+    {
+      "bytes": 1614,
+      "path": "verification/results/spice/write_read_retention_typical_3p60v.spice"
     },
     {
       "bytes": 15825,
@@ -3241,20 +3225,20 @@
     }
   ],
   "full_gds_lvs_pex_no_rc": {
+    "status": "PASS",
     "counts": {
       "PASS": 4
     },
     "manifest": "reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json",
-    "scope": "Magic extraction/PEX from packaged macro GDS wrappers",
-    "status": "PASS"
+    "scope": "Magic extraction/PEX from packaged macro GDS wrappers"
   },
   "full_gds_lvs_pex_power_rc": {
+    "status": "PASS",
     "counts": {
       "PASS": 1
     },
     "manifest": "reports/full_gds_lvs_pex_power_rc/MANIFEST.json",
-    "scope": "Magic extraction/PEX from packaged macro GDS wrappers",
-    "status": "PASS"
+    "scope": "Magic extraction/PEX from packaged macro GDS wrappers"
   },
   "gds_cell_rewrite": {
     "gf180mcu_3v3_12t_2r2w_sram_1024x32": "renamed_from_detronyx_12t_2w2r_1024x32_rc7f_finalphys",
@@ -3330,7 +3314,7 @@
   "periphery_lvs_manifest": "reports/periphery_block_leaves/MANIFEST.json",
   "periphery_lvs_status": "PASS",
   "signoff_counts": {
-    "PASS": 37,
+    "PASS": 36,
     "WARN": 4
   },
   "signoff_manifest": "reports/local_signoff_full/MANIFEST.json",

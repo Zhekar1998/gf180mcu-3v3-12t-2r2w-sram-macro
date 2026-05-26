@@ -1,13 +1,6 @@
 {
   "checks": [
     {
-      "area": "Staged signoff",
-      "check": "Prior staged signoff manifest",
-      "detail": "historical staged manifest loaded; current local gate supersedes it",
-      "evidence": "reports/open_signoff/MANIFEST.json",
-      "status": "PASS"
-    },
-    {
       "area": "LVS",
       "check": "Custom transistor control primitive Netgen LVS",
       "detail": "checked=7, fails=0, details=[]",
@@ -288,6 +281,10 @@
       "status": "PASS"
     }
   ],
+  "counts": {
+    "PASS": 36,
+    "WARN": 4
+  },
   "created_utc": "2026-05-25T22:55:42.584476+00:00",
   "overall_status": "WARN",
   "status_counts": {

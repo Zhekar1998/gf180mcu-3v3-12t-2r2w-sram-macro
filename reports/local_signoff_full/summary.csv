@@ -1,5 +1,4 @@
 area,check,status,evidence,detail
-Staged signoff,Prior staged signoff manifest,PASS,reports/open_signoff/MANIFEST.json,historical staged manifest loaded; current local gate supersedes it
 LVS,Custom transistor control primitive Netgen LVS,PASS,reports/control_leaf_library/MANIFEST.json,"checked=7, fails=0, details=[]"
 Control,Avalon stdcell control integration,PASS,reports/stdcell_control_integration/MANIFEST.json,"matrices=4, avalon_instances=1228, custom_row_select_instances=2304"
 Control,Avalon stdcell control placement,PASS,reports/stdcell_control_placement/MANIFEST.json,"macros=4, placed_stdcells=1228, deferred_row_select=2304, max_row_util=0.158"

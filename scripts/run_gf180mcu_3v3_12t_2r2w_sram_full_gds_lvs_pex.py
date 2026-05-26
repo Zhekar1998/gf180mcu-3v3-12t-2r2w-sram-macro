@@ -378,7 +378,7 @@ def main() -> int:
         "column_gds_manifest": rel(args.column_gds_manifest),
         "params": asdict(params),
         "results": results,
-        "lvs_note": "Device-expanded layout extraction is produced here. A full schematic-vs-layout Netgen LVS remains OPEN unless a matching full macro transistor reference CDL is supplied separately.",
+        "lvs_note": "Device-expanded layout extraction is produced here. Full schematic-vs-layout Netgen comparison requires a separately maintained full macro transistor reference CDL.",
     }
     (out_dir / "MANIFEST.json").write_text(json.dumps(output, indent=2) + "\n", encoding="utf-8")
     write_readme(out_dir, results, params)

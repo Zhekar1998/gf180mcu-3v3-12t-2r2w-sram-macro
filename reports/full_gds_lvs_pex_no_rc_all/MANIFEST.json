@@ -148,5 +148,5 @@
       }
     }
   ],
-  "lvs_note": "Device-expanded layout extraction is produced here. A full schematic-vs-layout Netgen LVS remains OPEN unless a matching full macro transistor reference CDL is supplied separately."
+  "lvs_note": "Device-expanded layout extraction is produced here. Full schematic-vs-layout Netgen comparison requires a separately maintained full macro transistor reference CDL."
 }

@@ -1,14 +1,13 @@
 # GF180MCU 12T SRAM Local Open-Source Signoff
 
 - Overall status: `WARN`
-- Status counts: `{'PASS': 37, 'WARN': 4}`
+- Status counts: `{'PASS': 36, 'WARN': 4}`
 
 This is the strongest local open-source gate currently available in this tree.
 It is not a foundry signoff replacement.
 
 | Area | Check | Status | Detail | Evidence |
 | --- | --- | --- | --- | --- |
-| `Staged signoff` | `Prior staged signoff manifest` | `PASS` | historical staged manifest loaded; current local gate supersedes it | `reports/open_signoff/MANIFEST.json` |
 | `LVS` | `Custom transistor control primitive Netgen LVS` | `PASS` | checked=7, fails=0, details=[] | `reports/control_leaf_library/MANIFEST.json` |
 | `Control` | `Avalon stdcell control integration` | `PASS` | matrices=4, avalon_instances=1228, custom_row_select_instances=2304 | `reports/stdcell_control_integration/MANIFEST.json` |
 | `Control` | `Avalon stdcell control placement` | `PASS` | macros=4, placed_stdcells=1228, deferred_row_select=2304, max_row_util=0.158 | `reports/stdcell_control_placement/MANIFEST.json` |

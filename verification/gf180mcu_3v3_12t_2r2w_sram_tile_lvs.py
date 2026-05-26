@@ -24,7 +24,7 @@ PUBLIC_TILE_CELL = "gf180mcu_3v3_12t_2r2w_sram_4x4_tile"
 
 
 def default_reports_path() -> Path:
-    return Path("reports/pin_lvs_pex_signoff")
+    return Path("reports/local_signoff_full")
 
 
 @dataclass(frozen=True)
@@ -73,7 +73,7 @@ def read_sources_from_zip(path: Path) -> list[SpiceSource]:
                 continue
             if not name.endswith(".current_pdk.spice"):
                 continue
-            if "/pin_lvs_pex_signoff/" not in name:
+            if "/local_signoff_full/" not in name:
                 continue
             sources.append(
                 SpiceSource(
@@ -114,7 +114,13 @@ def find_tile_cell(text: str, preferred: str | None) -> str:
     for candidate in (PUBLIC_TILE_CELL, TILE_CELL):
         if candidate in subckts:
             return candidate
-    matches = [cell for cell in subckts if "12t" in cell and "4x4" in cell and "tile" in cell]
+    matches = [
+        cell
+        for cell in subckts
+        if "12t" in cell
+        and "4x4" in cell
+        and ("tile" in cell or "routed_5layer_direct" in cell)
+    ]
     if len(matches) == 1:
         return matches[0]
     raise RuntimeError(f"could not identify tile subckt; candidates={matches or subckts[:8]}")

@@ -20,6 +20,12 @@ python3 scripts/place_gf180mcu_3v3_12t_2r2w_sram_column_periphery.py
 klayout -b -r scripts/merge_gf180mcu_3v3_12t_2r2w_sram_column_periphery_gds.rb
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate.py
 python3 scripts/run_gf180mcu_3v3_12t_2r2w_sram_full_gds_lvs_pex.py --timeout-sec 900 --no-rc --out-dir reports/full_gds_lvs_pex_no_rc_all
+python3 scripts/run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py \
+  --final-manifest reports/final_physical/MANIFEST.json \
+  --primitive-manifest reports/control_leaf_library/MANIFEST.json \
+  --out-dir reports/local_signoff_full \
+  --magic-rc /path/to/gf180mcuD.magicrc \
+  --gf180-klayout-drc-dir /path/to/gf180mcuD/libs.tech/klayout/drc
 make package-gf180mcu-3v3-12t-2r2w-sram-macro
 ```
 
@@ -45,7 +51,6 @@ Packaged local signoff entrypoint:
 ```bash
 python3 scripts/run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py \
   --final-manifest reports/final_physical/MANIFEST.json \
-  --open-signoff-manifest reports/open_signoff/MANIFEST.json \
   --primitive-manifest reports/control_leaf_library/MANIFEST.json \
   --stdcell-control-manifest reports/stdcell_control_integration/MANIFEST.json \
   --stdcell-placement-manifest reports/stdcell_control_placement/MANIFEST.json \

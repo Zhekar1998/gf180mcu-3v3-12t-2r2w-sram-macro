@@ -12,12 +12,12 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-TILE_SUBCKT = "gf180mcu_3v3_12t_2r2w_sram_4x4_tile"
+PUBLIC_TILE_SUBCKT = "gf180mcu_3v3_12t_2r2w_sram_4x4_tile"
 SUPPLIES = {"VDD", "VSS", "VSUBS"}
 
 
 def default_reports_path() -> Path:
-    return Path("reports/pin_lvs_pex_signoff")
+    return Path("reports/local_signoff_full")
 
 
 @dataclass(frozen=True)
@@ -92,7 +92,7 @@ def read_sources_from_zip(path: Path) -> list[SpiceSource]:
                 continue
             if not name.endswith(".current_pdk.spice"):
                 continue
-            if "/pin_lvs_pex_signoff/" not in name:
+            if "/local_signoff_full/" not in name:
                 continue
             log_name = name.replace(".current_pdk.spice", ".magic_pex.log")
             sources.append(
@@ -114,19 +114,38 @@ def parse_total_nets(log_text: str | None) -> int | None:
     return int(matches[-1]) if matches else None
 
 
+def find_tile_subckt(lines: list[str]) -> str | None:
+    subckts = []
+    for line in lines:
+        fields = line.split()
+        if len(fields) >= 2 and fields[0] == ".subckt":
+            subckts.append(fields[1])
+    if PUBLIC_TILE_SUBCKT in subckts:
+        return PUBLIC_TILE_SUBCKT
+    matches = [
+        cell
+        for cell in subckts
+        if "12t" in cell
+        and "4x4" in cell
+        and ("tile" in cell or "routed_5layer_direct" in cell)
+    ]
+    return matches[0] if len(matches) == 1 else None
+
+
 def check_source(source: SpiceSource) -> ConnectivityResult:
     lines = logical_spice_lines(source.text)
     parse_errors: list[str] = []
     tile_ports: list[str] | None = None
+    tile_subckt = find_tile_subckt(lines)
 
     for line in lines:
         fields = line.split()
-        if len(fields) >= 2 and fields[0] == ".subckt" and fields[1] == TILE_SUBCKT:
+        if tile_subckt and len(fields) >= 2 and fields[0] == ".subckt" and fields[1] == tile_subckt:
             tile_ports = fields[2:]
             break
 
     if tile_ports is None:
-        parse_errors.append(f"missing .subckt {TILE_SUBCKT}")
+        parse_errors.append("missing identifiable 12T 4x4 tile .subckt")
         tile_ports = []
 
     tied: Counter[tuple[str, str]] = Counter()
@@ -135,7 +154,7 @@ def check_source(source: SpiceSource) -> ConnectivityResult:
 
     for line in lines:
         fields = line.split()
-        if not fields or not fields[0].startswith("X") or fields[-1] != TILE_SUBCKT:
+        if not tile_subckt or not fields or not fields[0].startswith("X") or fields[-1] != tile_subckt:
             continue
         tile_instances += 1
         instance = fields[0]
@@ -152,7 +171,7 @@ def check_source(source: SpiceSource) -> ConnectivityResult:
                     samples.append((instance, port, net))
 
     if tile_ports and tile_instances == 0:
-        parse_errors.append(f"no top-level instances of {TILE_SUBCKT} found")
+        parse_errors.append(f"no top-level instances of {tile_subckt} found")
 
     total_nets = parse_total_nets(source.log_text)
     # Magic reports `Total Nets: 1` for these hierarchical blackbox macro PEX

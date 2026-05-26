@@ -1,0 +1,33 @@
+Netgen 1.5.133 compiled on Thu Dec  1 22:32:11 UTC 2022
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.layout_blackbox.spice
+Reading netlist file reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.reference_blackbox.cdl
+Reading setup file /home/yevhenii/IHP-Open-PDK/gf180mcuD/libs.tech/netgen/setup.tcl
+Comparison output logged to file reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.macro_top.netgen_lvs.log
+Logging to file "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.macro_top.netgen_lvs.log" enabled
+Contents of circuit 1:  Circuit: 'detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct'
+Circuit detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct contains 0 device instances.
+Circuit contains 0 nets, and 43 disconnected pins.
+Contents of circuit 2:  Circuit: 'detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct'
+Circuit detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct contains 0 device instances.
+Circuit contains 0 nets, and 43 disconnected pins.
+
+Circuit detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct contains no devices.
+Contents of circuit 1:  Circuit: 'gf180mcu_3v3_12t_2r2w_sram_1024x8'
+Circuit gf180mcu_3v3_12t_2r2w_sram_1024x8 contains 512 device instances.
+  Class: detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct instances: 512
+Circuit contains 20483 nets, and 77 disconnected pins.
+Contents of circuit 2:  Circuit: 'gf180mcu_3v3_12t_2r2w_sram_1024x8'
+Circuit gf180mcu_3v3_12t_2r2w_sram_1024x8 contains 512 device instances.
+  Class: detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct instances: 512
+Circuit contains 20483 nets, and 77 disconnected pins.
+
+Circuit 1 contains 512 devices, Circuit 2 contains 512 devices.
+Circuit 1 contains 20483 nets,    Circuit 2 contains 20483 nets.
+
+Circuits match with 41 symmetries.
+Netlists match uniquely.
+Circuits match correctly.
+Result: Circuits match uniquely.
+Logging to file "reports/lvs_gate/reports_local_signoff_full_gf180mcu_3v3_12t_2r2w_sram_1024x8_pex_gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice/lvs/gf180mcu_3v3_12t_2r2w_sram_1024x8.macro_top.netgen_lvs.log" disabled
+LVS Done.

@@ -111,7 +111,13 @@ def identify_cells(source: SpiceSource, preferred_macro: str | None, preferred_t
     elif PUBLIC_TILE_CELL in headers:
         tile_cell = PUBLIC_TILE_CELL
     else:
-        tile_matches = [cell for cell in headers if "12t" in cell and "4x4" in cell and "tile" in cell]
+        tile_matches = [
+            cell
+            for cell in headers
+            if "12t" in cell
+            and "4x4" in cell
+            and ("tile" in cell or "routed_5layer_direct" in cell)
+        ]
         if len(tile_matches) != 1:
             raise RuntimeError(f"could not identify tile cell in {source.name}")
         tile_cell = tile_matches[0]

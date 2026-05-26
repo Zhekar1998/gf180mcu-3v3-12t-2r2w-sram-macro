@@ -70,7 +70,7 @@ python3 verification/gf180mcu_3v3_12t_2r2w_sram_connectivity_check.py
 
 The packaged full local signoff report is generated under
 `reports/local_signoff_full/`. After the public GDS top-cell rewrite, the
-current full local status is `{'PASS': 37, 'WARN': 4}` with no unresolved or
+current full local status is `{'PASS': 36, 'WARN': 4}` with no unresolved or
 failing status entries.
 
 The Netgen scripts accept `--netgen-setup`; otherwise they use

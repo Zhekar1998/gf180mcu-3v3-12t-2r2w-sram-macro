@@ -146,14 +146,14 @@ def read_sources_from_zip(path: Path) -> list[Source]:
                 continue
             if not name.endswith(".current_pdk.spice"):
                 continue
-            if "/pin_lvs_pex_signoff/" not in name:
+            if "/local_signoff_full/" not in name:
                 continue
             sources.append(Source(name, Path(name), archive.read(name).decode("utf-8", errors="replace")))
     return sources
 
 
 def default_reports_path() -> Path:
-    return Path("reports/pin_lvs_pex_signoff")
+    return Path("reports/local_signoff_full")
 
 
 def subckt_headers(text: str) -> dict[str, list[str]]:
@@ -510,7 +510,7 @@ def write_outputs(out_dir: Path, rows: list[LvsRow]) -> None:
 
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--pin-lvs-pex-signoff", type=Path, default=default_reports_path())
+    parser.add_argument("--source-reports", type=Path, default=default_reports_path())
     parser.add_argument("--out-dir", type=Path, default=Path("verification/results/gf180mcu_3v3_12t_2r2w_sram_lvs_gate"))
     parser.add_argument("--netgen-lvs", default="netgen-lvs")
     parser.add_argument("--netgen-setup", type=Path, default=None)
@@ -524,9 +524,9 @@ def main(argv: list[str]) -> int:
         option="--netgen-setup",
     )
 
-    sources = read_sources(args.pin_lvs_pex_signoff)
+    sources = read_sources(args.source_reports)
     if not sources:
-        raise SystemExit(f"no .current_pdk.spice files found under {args.pin_lvs_pex_signoff}")
+        raise SystemExit(f"no .current_pdk.spice files found under {args.source_reports}")
 
     rows: list[LvsRow] = []
     had_error = False
