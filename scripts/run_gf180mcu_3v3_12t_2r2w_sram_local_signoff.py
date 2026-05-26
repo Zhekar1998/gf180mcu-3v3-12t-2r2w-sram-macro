@@ -5,11 +5,11 @@ This script intentionally separates tool-backed PASS/FAIL from items that are
 only audit proxies in an open-source flow.  It runs/collects:
 
 * Magic DRC evidence from the final physical package;
-* Magic PEX extraction with cthresh/rthresh set to zero;
+* Magic hierarchical extraction for top-level pin/LVS evidence;
 * staged Netgen LVS evidence for transistor-level control leaves;
 * physical Avalon stdcell-control GDS merge and signal-route evidence;
 * final macro abstract pin LVS against the extracted top subckt;
-* full-GDS device-expanded extraction and short-audit evidence;
+* full-GDS hierarchical extraction, power-RC, and short-audit evidence;
 * GF180MCU KLayout antenna and density decks;
 * ngspice disturb/conflict and VDD sweep evidence as the packaged SNM proxy;
 * a conservative local EM/IR power-strap audit.
@@ -34,6 +34,9 @@ from typing import Any
 
 MEASURE_RE = re.compile(r"^\s*([A-Za-z0-9_]+)\s*=\s*([-+0-9.eE]+)")
 DRC_RE = re.compile(r"(?:Total DRC errors found|DRC error count):\s*(\d+)")
+BAD_DEVICE_RE = re.compile(r"Bad Device Location")
+MISSING_DEVICE_RE = re.compile(r"Couldn't find device")
+EXTRACT_NODE_ERROR_RE = re.compile(r"Error in extracting node")
 
 
 @dataclass(frozen=True)
@@ -55,6 +58,21 @@ def load_json(path: Path) -> Any:
 
 def file_ok(path: Path) -> bool:
     return path.exists() and path.stat().st_size > 0
+
+
+def magic_log_issues(path: Path) -> dict[str, int]:
+    if not path.exists():
+        return {"bad_device_locations": 0, "missing_devices": 0, "extract_node_errors": 0}
+    text = path.read_text(encoding="utf-8", errors="replace")
+    return {
+        "bad_device_locations": len(BAD_DEVICE_RE.findall(text)),
+        "missing_devices": len(MISSING_DEVICE_RE.findall(text)),
+        "extract_node_errors": len(EXTRACT_NODE_ERROR_RE.findall(text)),
+    }
+
+
+def has_magic_log_issues(issues: dict[str, int]) -> bool:
+    return any(int(value) > 0 for value in issues.values())
 
 
 def stdcell_control_summary(root: Path, manifest_path: Path) -> tuple[str, str]:
@@ -291,6 +309,10 @@ def full_gds_extract_summary(root: Path, manifest_path: Path, macro: str) -> tup
         return "FAIL", f"missing macro result in full-GDS extraction manifest: {macro}"
     if item.get("status") != "PASS" or item.get("returncode") != 0 or item.get("timed_out"):
         bad.append(f"status={item.get('status')} returncode={item.get('returncode')} timed_out={item.get('timed_out')}")
+    log = root / str(item.get("log", ""))
+    issues = magic_log_issues(log)
+    if has_magic_log_issues(issues):
+        bad.append(f"magic_log_issues={issues}")
     shorts = item.get("electrical_shorts", [])
     if shorts:
         bad.append(f"electrical_shorts={shorts[:4]}")
@@ -337,6 +359,10 @@ def full_gds_power_rc_summary(root: Path, manifest_path: Path) -> tuple[str, str
         rc_spice = root / str(item.get("rc_spice", ""))
         if item.get("status") != "PASS" or item.get("returncode") != 0 or item.get("timed_out"):
             bad.append(f"{item.get('macro')}: status={item.get('status')} returncode={item.get('returncode')} timed_out={item.get('timed_out')}")
+        log = root / str(item.get("log", ""))
+        issues = magic_log_issues(log)
+        if has_magic_log_issues(issues):
+            bad.append(f"{item.get('macro')}: magic_log_issues={issues}")
         if item.get("electrical_shorts"):
             bad.append(f"{item.get('macro')}: shorts={item.get('electrical_shorts')[:4]}")
         if int(item.get("rc_spice_bytes", 0)) <= 0 or not file_ok(rc_spice):
@@ -354,23 +380,25 @@ def parse_magic_drc(path: Path) -> int | None:
     return int(matches[-1]) if matches else None
 
 
-def write_extract_tcl(path: Path) -> None:
-    path.write_text(
-        "\n".join(
+def write_extract_tcl(path: Path, *, enable_extresist: bool) -> None:
+    lines = [
+        "crashbackups stop",
+        "drc off",
+        "set topcell $::env(MAGIC_TOPCELL)",
+        "load $topcell",
+        "select top cell",
+        "expand",
+        "extract style ngspice()",
+        "extract unique",
+        "extract path $::env(EXT_DIR)",
+        "extract no all",
+        "extract all",
+        "ext2sim labels on",
+        "ext2sim -p $::env(EXT_DIR) $topcell",
+    ]
+    if enable_extresist:
+        lines.extend(
             [
-                "crashbackups stop",
-                "drc off",
-                "set topcell $::env(MAGIC_TOPCELL)",
-                "load $topcell",
-                "select top cell",
-                "expand",
-                "extract style ngspice()",
-                "extract unique",
-                "extract path $::env(EXT_DIR)",
-                "extract no all",
-                "extract all",
-                "ext2sim labels on",
-                "ext2sim -p $::env(EXT_DIR) $topcell",
                 "extresist threshold 0",
                 "extresist tolerance 10",
                 "extresist extout on",
@@ -379,19 +407,30 @@ def write_extract_tcl(path: Path) -> None:
                 "    eval extresist include $::env(PEX_NETS)",
                 "}",
                 "extresist all",
-                "ext2spice lvs",
-                "ext2spice blackbox on",
-                "ext2spice -p $::env(EXT_DIR) -o $::env(PEX_LVS_SPICE)",
+            ]
+        )
+    lines.extend(
+        [
+            "ext2spice lvs",
+            "ext2spice blackbox on",
+            "ext2spice -p $::env(EXT_DIR) -o $::env(PEX_LVS_SPICE)",
+        ]
+    )
+    if enable_extresist:
+        lines.extend(
+            [
                 "ext2spice cthresh 0",
                 "ext2spice rthresh 0",
                 "ext2spice extresist on",
                 "ext2spice resistor tee on",
                 "ext2spice blackbox on",
                 "ext2spice -p $::env(EXT_DIR) -o $::env(PEX_RC_SPICE)",
-                "quit -noprompt",
             ]
         )
-        + "\n"
+    lines.append("quit -noprompt")
+    path.write_text(
+        "\n".join(lines) + "\n",
+        encoding="utf-8",
     )
 
 
@@ -402,15 +441,28 @@ def tcl_list(items: list[str]) -> str:
     return " ".join(escaped)
 
 
-def run_magic_pex(*, macro: str, magic_dir: Path, out_dir: Path, magic: str, magic_rc: Path, pex_nets: list[str]) -> dict[str, Any]:
+def run_magic_pex(
+    *,
+    macro: str,
+    magic_dir: Path,
+    out_dir: Path,
+    magic: str,
+    magic_rc: Path,
+    pex_nets: list[str],
+    enable_extresist: bool,
+) -> dict[str, Any]:
     out_dir.mkdir(parents=True, exist_ok=True)
     ext_dir = out_dir / "extfiles"
     ext_dir.mkdir(parents=True, exist_ok=True)
-    tcl = out_dir / "run_extract_pex.tcl"
+    tcl = out_dir / ("run_extract_pex.tcl" if enable_extresist else "run_extract_lvs.tcl")
     log = out_dir / f"{macro}.magic_pex.log"
     lvs_spice = out_dir / f"{macro}.current_pdk.spice"
     rc_spice = out_dir / f"{macro}.current_pdk_rc.spice"
-    write_extract_tcl(tcl)
+    if not enable_extresist:
+        for stale in (out_dir / "run_extract_pex.tcl", rc_spice, ext_dir / f"{macro}.res.ext"):
+            if stale.exists():
+                stale.unlink()
+    write_extract_tcl(tcl, enable_extresist=enable_extresist)
     env = os.environ.copy()
     resolved_magic_rc = magic_rc.resolve()
     if len(resolved_magic_rc.parents) >= 4:
@@ -439,12 +491,15 @@ def run_magic_pex(*, macro: str, magic_dir: Path, out_dir: Path, magic: str, mag
     log.write_text(proc.stdout, encoding="utf-8")
     return {
         "returncode": proc.returncode,
+        "enable_extresist": enable_extresist,
         "log": str(log),
         "lvs_spice": str(lvs_spice),
         "rc_spice": str(rc_spice),
         "lvs_spice_bytes": lvs_spice.stat().st_size if lvs_spice.exists() else 0,
         "rc_spice_bytes": rc_spice.stat().st_size if rc_spice.exists() else 0,
+        "lvs_spice_stats": spice_stats(lvs_spice),
         "spice_stats": spice_stats(rc_spice),
+        "magic_log_issues": magic_log_issues(log),
     }
 
 
@@ -874,25 +929,33 @@ def main() -> int:
             magic=args.magic,
             magic_rc=args.magic_rc,
             pex_nets=ref_pins,
+            enable_extresist=False,
         )
         tool_runs["magic_pex"][macro] = pex
-        pex_ok = pex["returncode"] == 0 and pex["rc_spice_bytes"] > 0 and pex["spice_stats"]["subckt"] > 0
-        pex_has_rc = pex["spice_stats"]["resistors"] > 0 or pex["spice_stats"]["capacitors"] > 0
-        pex_status = "PASS" if pex_ok and pex_has_rc else "FAIL"
+        pex_ok = (
+            pex["returncode"] == 0
+            and pex["lvs_spice_bytes"] > 0
+            and pex["lvs_spice_stats"]["subckt"] > 0
+            and not has_magic_log_issues(pex["magic_log_issues"])
+        )
+        pex_status = "PASS" if pex_ok else "FAIL"
         add(
             checks,
             macro,
-            "Magic PEX extraction",
+            "Magic hierarchical LVS extraction",
             pex_status,
             pex["log"],
-            f"rc_spice_bytes={pex['rc_spice_bytes']}, stats={pex['spice_stats']}, has_rc={pex_has_rc}",
+            (
+                f"lvs_spice_bytes={pex['lvs_spice_bytes']}, stats={pex['lvs_spice_stats']}, "
+                f"extresist=False, magic_log_issues={pex['magic_log_issues']}"
+            ),
         )
 
         ext_pins = subckt_pins(Path(pex["lvs_spice"]), macro)
         pin_ok = bool(ref_pins) and set(ref_pins) == set(ext_pins)
         add(checks, macro, "Final abstract pin LVS", "PASS" if pin_ok else "FAIL", pex["lvs_spice"], f"ref_pins={len(ref_pins)}, extracted_pins={len(ext_pins)}, missing={sorted(set(ref_pins) - set(ext_pins))[:6]}, extra={sorted(set(ext_pins) - set(ref_pins))[:6]}")
         full_gds_status, full_gds_detail = full_gds_extract_summary(root, args.full_gds_extract_manifest, macro)
-        add(checks, macro, "Full-GDS device extraction/short audit", full_gds_status, args.full_gds_extract_manifest, full_gds_detail)
+        add(checks, macro, "Full-GDS hierarchical extraction/short audit", full_gds_status, args.full_gds_extract_manifest, full_gds_detail)
 
         if args.skip_klayout:
             add(checks, macro, "KLayout GF180 density deck", "OPEN", gds, "skipped by --skip-klayout for focused pin-LVS/PEX iteration")

@@ -9,7 +9,3 @@ This merge does not change macro width or height.
 | `gf180mcu_3v3_12t_2r2w_sram_512x32` | `PASS` | 276 | 276 | `true` |
 | `gf180mcu_3v3_12t_2r2w_sram_1024x8` | `PASS` | 322 | 322 | `true` |
 | `gf180mcu_3v3_12t_2r2w_sram_1024x32` | `PASS` | 354 | 354 | `true` |
-
-Smallest-macro smoke DRC:
-
-- `gf180mcu_3v3_12t_2r2w_sram_512x8`: GF180 KLayout `main.drc` PASS, `0` violations, report `reports/stdcell_control_gds_merge/gf180mcu_3v3_12t_2r2w_sram_512x8/main_drc.lyrdb`.

@@ -2,7 +2,7 @@
 
 | Check | Result |
 | --- | --- |
-| Source tile | `gf180mcu_3v3_12t_2r2w_sram_4x4_tile` |
+| Source tile | `detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct` |
 | Logical shape | `1024 x 8` |
 | Logical tile grid | `256 x 2` |
 | Physical tile grid | `32 x 16` |

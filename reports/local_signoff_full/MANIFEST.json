@@ -65,8 +65,8 @@
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
-      "check": "Magic PEX extraction",
-      "detail": "rc_spice_bytes=2009098, stats={'subckt': 2, 'resistors': 4153, 'capacitors': 0, 'mos': 0, 'instances': 2240}, has_rc=True",
+      "check": "Magic hierarchical LVS extraction",
+      "detail": "lvs_spice_bytes=1884784, stats={'subckt': 2, 'resistors': 0, 'capacitors': 0, 'mos': 0, 'instances': 2240}, extresist=False, magic_log_issues={'bad_device_locations': 0, 'missing_devices': 0, 'extract_node_errors': 0}",
       "evidence": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/gf180mcu_3v3_12t_2r2w_sram_1024x32.magic_pex.log",
       "status": "PASS"
     },
@@ -79,7 +79,7 @@
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
-      "check": "Full-GDS device extraction/short audit",
+      "check": "Full-GDS hierarchical extraction/short audit",
       "detail": "full-GDS extract PASS, shorts=0, subckts=10, instances=6900, lvs_spice=reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.full_gds.current_pdk.spice",
       "evidence": "reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json",
       "status": "PASS"
@@ -114,8 +114,8 @@
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
-      "check": "Magic PEX extraction",
-      "detail": "rc_spice_bytes=516879, stats={'subckt': 2, 'resistors': 1049, 'capacitors': 0, 'mos': 0, 'instances': 704}, has_rc=True",
+      "check": "Magic hierarchical LVS extraction",
+      "detail": "lvs_spice_bytes=487386, stats={'subckt': 2, 'resistors': 0, 'capacitors': 0, 'mos': 0, 'instances': 704}, extresist=False, magic_log_issues={'bad_device_locations': 0, 'missing_devices': 0, 'extract_node_errors': 0}",
       "evidence": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/gf180mcu_3v3_12t_2r2w_sram_1024x8.magic_pex.log",
       "status": "PASS"
     },
@@ -128,7 +128,7 @@
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
-      "check": "Full-GDS device extraction/short audit",
+      "check": "Full-GDS hierarchical extraction/short audit",
       "detail": "full-GDS extract PASS, shorts=0, subckts=10, instances=3188, lvs_spice=reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.full_gds.current_pdk.spice",
       "evidence": "reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json",
       "status": "PASS"
@@ -163,8 +163,8 @@
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_512x32",
-      "check": "Magic PEX extraction",
-      "detail": "rc_spice_bytes=1014733, stats={'subckt': 2, 'resistors': 2105, 'capacitors': 0, 'mos': 0, 'instances': 1216}, has_rc=True",
+      "check": "Magic hierarchical LVS extraction",
+      "detail": "lvs_spice_bytes=953922, stats={'subckt': 2, 'resistors': 0, 'capacitors': 0, 'mos': 0, 'instances': 1216}, extresist=False, magic_log_issues={'bad_device_locations': 0, 'missing_devices': 0, 'extract_node_errors': 0}",
       "evidence": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/gf180mcu_3v3_12t_2r2w_sram_512x32.magic_pex.log",
       "status": "PASS"
     },
@@ -177,7 +177,7 @@
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_512x32",
-      "check": "Full-GDS device extraction/short audit",
+      "check": "Full-GDS hierarchical extraction/short audit",
       "detail": "full-GDS extract PASS, shorts=0, subckts=10, instances=3750, lvs_spice=reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.full_gds.current_pdk.spice",
       "evidence": "reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json",
       "status": "PASS"
@@ -212,8 +212,8 @@
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_512x8",
-      "check": "Magic PEX extraction",
-      "detail": "rc_spice_bytes=269487, stats={'subckt': 2, 'resistors': 537, 'capacitors': 0, 'mos': 0, 'instances': 448}, has_rc=True",
+      "check": "Magic hierarchical LVS extraction",
+      "detail": "lvs_spice_bytes=254636, stats={'subckt': 2, 'resistors': 0, 'capacitors': 0, 'mos': 0, 'instances': 448}, extresist=False, magic_log_issues={'bad_device_locations': 0, 'missing_devices': 0, 'extract_node_errors': 0}",
       "evidence": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/gf180mcu_3v3_12t_2r2w_sram_512x8.magic_pex.log",
       "status": "PASS"
     },
@@ -226,7 +226,7 @@
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_512x8",
-      "check": "Full-GDS device extraction/short audit",
+      "check": "Full-GDS hierarchical extraction/short audit",
       "detail": "full-GDS extract PASS, shorts=0, subckts=10, instances=1862, lvs_spice=reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.full_gds.current_pdk.spice",
       "evidence": "reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json",
       "status": "PASS"
@@ -276,19 +276,15 @@
     {
       "area": "PEX",
       "check": "512x8 full-GDS VDD/VSS RC smoke",
-      "detail": "macros=['gf180mcu_3v3_12t_2r2w_sram_512x8'], shorts=0, rc_spice_bytes=[655286]",
+      "detail": "macros=['gf180mcu_3v3_12t_2r2w_sram_512x8'], shorts=0, rc_spice_bytes=[609289]",
       "evidence": "reports/full_gds_lvs_pex_power_rc/MANIFEST.json",
       "status": "PASS"
     }
   ],
-  "counts": {
-    "PASS": 36,
-    "WARN": 4
-  },
-  "created_utc": "2026-05-25T22:55:42.584476+00:00",
+  "created_utc": "2026-05-26T20:10:58.087139+00:00",
   "overall_status": "WARN",
   "status_counts": {
-    "PASS": 37,
+    "PASS": 36,
     "WARN": 4
   },
   "tool_runs": {
@@ -354,63 +350,115 @@
     },
     "magic_pex": {
       "gf180mcu_3v3_12t_2r2w_sram_1024x32": {
+        "enable_extresist": false,
         "log": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/gf180mcu_3v3_12t_2r2w_sram_1024x32.magic_pex.log",
         "lvs_spice": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk.spice",
         "lvs_spice_bytes": 1884784,
-        "rc_spice": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk_rc.spice",
-        "rc_spice_bytes": 2009098,
-        "returncode": 0,
-        "spice_stats": {
+        "lvs_spice_stats": {
           "capacitors": 0,
           "instances": 2240,
           "mos": 0,
-          "resistors": 4153,
+          "resistors": 0,
           "subckt": 2
+        },
+        "magic_log_issues": {
+          "bad_device_locations": 0,
+          "extract_node_errors": 0,
+          "missing_devices": 0
+        },
+        "rc_spice": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x32/pex/gf180mcu_3v3_12t_2r2w_sram_1024x32.current_pdk_rc.spice",
+        "rc_spice_bytes": 0,
+        "returncode": 0,
+        "spice_stats": {
+          "capacitors": 0,
+          "instances": 0,
+          "mos": 0,
+          "resistors": 0,
+          "subckt": 0
         }
       },
       "gf180mcu_3v3_12t_2r2w_sram_1024x8": {
+        "enable_extresist": false,
         "log": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/gf180mcu_3v3_12t_2r2w_sram_1024x8.magic_pex.log",
         "lvs_spice": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk.spice",
         "lvs_spice_bytes": 487386,
-        "rc_spice": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk_rc.spice",
-        "rc_spice_bytes": 516879,
-        "returncode": 0,
-        "spice_stats": {
+        "lvs_spice_stats": {
           "capacitors": 0,
           "instances": 704,
           "mos": 0,
-          "resistors": 1049,
+          "resistors": 0,
           "subckt": 2
+        },
+        "magic_log_issues": {
+          "bad_device_locations": 0,
+          "extract_node_errors": 0,
+          "missing_devices": 0
+        },
+        "rc_spice": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x8/pex/gf180mcu_3v3_12t_2r2w_sram_1024x8.current_pdk_rc.spice",
+        "rc_spice_bytes": 0,
+        "returncode": 0,
+        "spice_stats": {
+          "capacitors": 0,
+          "instances": 0,
+          "mos": 0,
+          "resistors": 0,
+          "subckt": 0
         }
       },
       "gf180mcu_3v3_12t_2r2w_sram_512x32": {
+        "enable_extresist": false,
         "log": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/gf180mcu_3v3_12t_2r2w_sram_512x32.magic_pex.log",
         "lvs_spice": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk.spice",
         "lvs_spice_bytes": 953922,
-        "rc_spice": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk_rc.spice",
-        "rc_spice_bytes": 1014733,
-        "returncode": 0,
-        "spice_stats": {
+        "lvs_spice_stats": {
           "capacitors": 0,
           "instances": 1216,
           "mos": 0,
-          "resistors": 2105,
+          "resistors": 0,
           "subckt": 2
-        }
-      },
-      "gf180mcu_3v3_12t_2r2w_sram_512x8": {
-        "log": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/gf180mcu_3v3_12t_2r2w_sram_512x8.magic_pex.log",
-        "lvs_spice": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice",
-        "lvs_spice_bytes": 254636,
-        "rc_spice": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk_rc.spice",
-        "rc_spice_bytes": 269487,
+        },
+        "magic_log_issues": {
+          "bad_device_locations": 0,
+          "extract_node_errors": 0,
+          "missing_devices": 0
+        },
+        "rc_spice": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x32/pex/gf180mcu_3v3_12t_2r2w_sram_512x32.current_pdk_rc.spice",
+        "rc_spice_bytes": 0,
         "returncode": 0,
         "spice_stats": {
           "capacitors": 0,
+          "instances": 0,
+          "mos": 0,
+          "resistors": 0,
+          "subckt": 0
+        }
+      },
+      "gf180mcu_3v3_12t_2r2w_sram_512x8": {
+        "enable_extresist": false,
+        "log": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/gf180mcu_3v3_12t_2r2w_sram_512x8.magic_pex.log",
+        "lvs_spice": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk.spice",
+        "lvs_spice_bytes": 254636,
+        "lvs_spice_stats": {
+          "capacitors": 0,
           "instances": 448,
           "mos": 0,
-          "resistors": 537,
+          "resistors": 0,
           "subckt": 2
+        },
+        "magic_log_issues": {
+          "bad_device_locations": 0,
+          "extract_node_errors": 0,
+          "missing_devices": 0
+        },
+        "rc_spice": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x8/pex/gf180mcu_3v3_12t_2r2w_sram_512x8.current_pdk_rc.spice",
+        "rc_spice_bytes": 0,
+        "returncode": 0,
+        "spice_stats": {
+          "capacitors": 0,
+          "instances": 0,
+          "mos": 0,
+          "resistors": 0,
+          "subckt": 0
         }
       }
     }

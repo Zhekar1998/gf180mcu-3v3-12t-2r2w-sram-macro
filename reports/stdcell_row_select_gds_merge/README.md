@@ -5,10 +5,10 @@ This closes physical row-select stdcell presence and WL-stub stitching. Upstream
 
 | Macro | Status | Row-select stdcells | Newly inserted this run | Route shapes | Footprint |
 | --- | --- | ---: | ---: | ---: | --- |
-| `gf180mcu_3v3_12t_2r2w_sram_512x8` | `PASS` | 1024 | 0 | 6960 | `true` |
-| `gf180mcu_3v3_12t_2r2w_sram_512x32` | `PASS` | 2048 | 0 | 13872 | `true` |
-| `gf180mcu_3v3_12t_2r2w_sram_1024x8` | `PASS` | 2048 | 0 | 13872 | `true` |
-| `gf180mcu_3v3_12t_2r2w_sram_1024x32` | `PASS` | 4096 | 0 | 27696 | `true` |
+| `gf180mcu_3v3_12t_2r2w_sram_512x8` | `PASS` | 1024 | 1024 | 6960 | `true` |
+| `gf180mcu_3v3_12t_2r2w_sram_512x32` | `PASS` | 2048 | 2048 | 13872 | `true` |
+| `gf180mcu_3v3_12t_2r2w_sram_1024x8` | `PASS` | 2048 | 2048 | 13872 | `true` |
+| `gf180mcu_3v3_12t_2r2w_sram_1024x32` | `PASS` | 4096 | 4096 | 27696 | `true` |
 
 Smoke DRC:
 

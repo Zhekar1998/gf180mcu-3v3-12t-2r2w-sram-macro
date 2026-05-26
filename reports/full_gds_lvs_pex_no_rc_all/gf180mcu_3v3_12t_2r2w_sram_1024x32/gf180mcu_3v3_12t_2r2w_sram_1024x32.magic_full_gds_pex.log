@@ -23,11 +23,12 @@ Reading "gf180mcu_as_sc_mcu7t3v3__nand3_2".
 Reading "gf180mcu_as_sc_mcu7t3v3__nand2_2".
 Reading "gf180mcu_as_sc_mcu7t3v3__inv_2".
 Reading "gf180mcu_3v3_12t_2r2w_sram_1024x32_stdcell_control_signal_routes".
+Reading "gf180mcu_3v3_12t_2r2w_sram_1024x32_column_periphery_routes".
 Reading "detronyx_12t_write_driver_rc1".
 Reading "detronyx_12t_precharge_sense_rc1".
 Reading "gf180mcu_3v3_12t_2r2w_sram_1024x32_array_control_core".
     5000 uses
-Reading "gf180mcu_3v3_12t_2r2w_sram_1024x32_column_periphery_routes".
+Reading "gf180mcu_3v3_12t_2r2w_sram_1024x32".
 Reading "gf180mcu_as_sc_mcu7t3v3__xor2_4".
 Reading "gf180mcu_as_sc_mcu7t3v3__xor2_2".
 Reading "gf180mcu_as_sc_mcu7t3v3__xnor2_4".
@@ -97,7 +98,6 @@ Reading "gf180mcu_as_sc_mcu7t3v3__ao211_4".
 Reading "gf180mcu_as_sc_mcu7t3v3__ao211_2".
 Reading "gf180mcu_as_sc_mcu7t3v3__and2_4".
 Reading "gf180mcu_as_sc_mcu7t3v3__and2_2".
-Reading "gf180mcu_3v3_12t_2r2w_sram_1024x32".
 The following types are not handled by extraction and will be treated as non-electrical types:
     obsactive mvobsactive filldiff fillpoly m1hole obsm1 fillm1 obsv1 m2hole obsm2 fillm2 obsv2 m3hole obsm3 fillm3 m4hole obsm4 fillm4 m5hole obsm5 fillm5 glass fillblock lvstext obscomment 
 Extraction style is now "ngspice()"
@@ -123,9 +123,10 @@ Extracting gf180mcu_as_sc_mcu7t3v3__nor2_2 into /home/yevhenii/gf180mcu-3v3-12t-
 Extracting gf180mcu_as_sc_mcu7t3v3__nand3_2 into /home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_as_sc_mcu7t3v3__nand3_2.ext:
 Extracting gf180mcu_3v3_12t_2r2w_sram_1024x32_stdcell_control_signal_routes into /home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_3v3_12t_2r2w_sram_1024x32_stdcell_control_signal_routes.ext:
 Extracting gf180mcu_3v3_12t_2r2w_sram_1024x32_array_control_core into /home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_3v3_12t_2r2w_sram_1024x32_array_control_core.ext:
+gf180mcu_3v3_12t_2r2w_sram_1024x32_array_control_core: 167897 errors
 Extracting gf180mcu_3v3_12t_2r2w_sram_1024x32_column_periphery_routes into /home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_3v3_12t_2r2w_sram_1024x32_column_periphery_routes.ext:
 Extracting gf180mcu_3v3_12t_2r2w_sram_1024x32 into /home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles/gf180mcu_3v3_12t_2r2w_sram_1024x32.ext:
-gf180mcu_3v3_12t_2r2w_sram_1024x32: 4610908 errors
-Total of 4610908 errors (check feedback entries).
+gf180mcu_3v3_12t_2r2w_sram_1024x32: 4475159 errors
+Total of 4643056 errors (check feedback entries).
 exttosim finished.
 exttospice finished.

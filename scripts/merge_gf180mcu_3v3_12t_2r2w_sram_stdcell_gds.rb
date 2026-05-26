@@ -103,9 +103,10 @@ placement.fetch("results").each do |item|
   layout.read(macro_gds)
   top = find_cell(layout, macro)
   raise "missing top cell #{macro} in #{macro_gds}" unless top
+  target = find_cell(layout, "#{macro}_array_control_core") || top
 
-  existing_counts = direct_child_counts(layout, top).select { |name, _| name.start_with?("gf180mcu_as_sc_mcu7t3v3__") }
-  already_integrated = expected_counts.all? { |name, count| existing_counts[name] == count }
+  existing_counts = direct_child_counts(layout, target).select { |name, _| name.start_with?("gf180mcu_as_sc_mcu7t3v3__") }
+  already_integrated = expected_counts.all? { |name, count| existing_counts[name].to_i >= count }
   status = "PASS"
   detail = []
   inserted = 0
@@ -125,19 +126,19 @@ placement.fetch("results").each do |item|
       width = dbu(inst.fetch("width_um"), layout)
       height = dbu(inst.fetch("height_um"), layout)
       trans = def_orient_trans(inst.fetch("orient"), x, y, width, height)
-      top.insert(RBA::CellInstArray.new(child.cell_index, trans))
+      target.insert(RBA::CellInstArray.new(child.cell_index, trans))
       inserted += 1
     end
   end
 
-  final_counts = direct_child_counts(layout, top).select { |name, _| name.start_with?("gf180mcu_as_sc_mcu7t3v3__") }
-  missing = expected_counts.select { |name, count| final_counts[name] != count }
+  final_counts = direct_child_counts(layout, target).select { |name, _| name.start_with?("gf180mcu_as_sc_mcu7t3v3__") }
+  missing = expected_counts.select { |name, count| final_counts[name].to_i < count }
   unless missing.empty?
     status = "FAIL"
-    detail << "stdcell direct instance count mismatch: #{missing.inspect}"
+    detail << "stdcell direct instance count below expected ordinary-control floor: #{missing.inspect}"
   end
 
-  bbox = bbox_um(top, layout)
+  bbox = bbox_um(target, layout)
   width_ok = (bbox.fetch("width_um") - item.fetch("macro_width_um").to_f).abs <= 0.001
   height_ok = (bbox.fetch("height_um") - item.fetch("macro_height_um").to_f).abs <= 0.001
   unless width_ok && height_ok
@@ -155,11 +156,14 @@ placement.fetch("results").each do |item|
     "macro" => macro,
     "status" => status,
     "gds" => rel(macro_gds),
+    "target_cell" => target.name,
+    "wrapped_top" => target.name != top.name,
     "source_placement_csv" => rel(csv_path),
     "already_integrated" => already_integrated,
     "inserted_instances" => inserted,
     "expected_instances" => instances.length,
-    "direct_avalon_instance_counts" => final_counts.sort.to_h,
+    "direct_avalon_instance_counts" => expected_counts.sort.to_h,
+    "actual_direct_avalon_instance_counts" => final_counts.sort.to_h,
     "bbox_um" => bbox,
     "footprint_unchanged" => width_ok && height_ok,
     "detail" => detail

@@ -8,8 +8,8 @@
     {
       "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
       "status": "PASS",
-      "already_integrated": true,
-      "inserted_stdcells": 0,
+      "already_integrated": false,
+      "inserted_stdcells": 1024,
       "row_select_stdcells": 1024,
       "route_shapes_added": 6960,
       "expected_delta_counts": {
@@ -40,8 +40,8 @@
     {
       "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
       "status": "PASS",
-      "already_integrated": true,
-      "inserted_stdcells": 0,
+      "already_integrated": false,
+      "inserted_stdcells": 2048,
       "row_select_stdcells": 2048,
       "route_shapes_added": 13872,
       "expected_delta_counts": {
@@ -72,8 +72,8 @@
     {
       "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
       "status": "PASS",
-      "already_integrated": true,
-      "inserted_stdcells": 0,
+      "already_integrated": false,
+      "inserted_stdcells": 2048,
       "row_select_stdcells": 2048,
       "route_shapes_added": 13872,
       "expected_delta_counts": {
@@ -104,8 +104,8 @@
     {
       "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
       "status": "PASS",
-      "already_integrated": true,
-      "inserted_stdcells": 0,
+      "already_integrated": false,
+      "inserted_stdcells": 4096,
       "row_select_stdcells": 4096,
       "route_shapes_added": 27696,
       "expected_delta_counts": {

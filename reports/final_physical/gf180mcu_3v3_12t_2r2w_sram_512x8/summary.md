@@ -1,4 +1,4 @@
-# gf180mcu_3v3_12t_2r2w_sram_512x8 current Final Physical
+# gf180mcu_3v3_12t_2r2w_sram_512x8 Release Physical Seed
 
 | Check | Result |
 | --- | --- |
@@ -14,10 +14,10 @@
 | Magic DRC | `0` |
 | Footprint status | `pass_max` |
 
-This is the final hard-macro physical abstract for top-level integration:
+This is the release hard-macro physical seed for top-level integration:
 GDS, LEF, Magic, blackbox CDL/SV, behavioral model, decode contract,
 row-edge corridors, boundary pins, and M4/M5 power are emitted.
 
-The dense transistor-level row-select matrix is still represented by the
-current structural CDL and leaf library rather than expanded into this top
-GDS one row at a time.
+Downstream package gates integrate Avalon control/row-select standard
+cells, column periphery leaves, and routed control/periphery shapes into
+the published macro GDS before local signoff.

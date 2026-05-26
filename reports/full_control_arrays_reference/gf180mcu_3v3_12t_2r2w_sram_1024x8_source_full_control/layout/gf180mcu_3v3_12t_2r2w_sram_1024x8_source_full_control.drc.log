@@ -13,13 +13,13 @@ Scaled tech values by 10 / 1 to match internal grid scaling
 Loading gf180mcuD Device Generator Menu ...
 Using technology "gf180mcuD", version 1.0.532-2-gc6d73a3
 Cell gf180mcu_3v3_12t_2r2w_sram_1024x8_source_full_control read from current working directory
-Cell gf180mcu_3v3_12t_2r2w_sram_4x4_tile read from current working directory
+Cell detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct read from current working directory
 Processing timestamp mismatches.
-Timestamp mismatches found in these cells: gf180mcu_3v3_12t_2r2w_sram_4x4_tile.
+Timestamp mismatches found in these cells: detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.
 DRC style is now "drc(full)"
 Total DRC errors found: 0
 Loading DRC CIF style.
-<local-home>/IHP-Open-PDK/gf180mcuD/libs.tech/magic/gf180mcuD.tech: line 2547: section drc:
+/home/yevhenii/IHP-Open-PDK/gf180mcuD/libs.tech/magic/gf180mcuD.tech: line 2547: section drc:
 	Unknown cif layer: ndiff_missing_pwell
-<local-home>/IHP-Open-PDK/gf180mcuD/libs.tech/magic/gf180mcuD.tech: line 2549: section drc:
+/home/yevhenii/IHP-Open-PDK/gf180mcuD/libs.tech/magic/gf180mcuD.tech: line 2549: section drc:
 	Unknown cif layer: mvndiff_missing_pwell

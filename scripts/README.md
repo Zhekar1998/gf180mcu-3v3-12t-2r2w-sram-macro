@@ -44,7 +44,7 @@ Release script names in this package:
 - `merge_gf180mcu_3v3_12t_2r2w_sram_column_periphery_gds.rb`
 - `audit_gf180mcu_3v3_12t_2r2w_sram_m5_power_shorts.rb`
 - `run_gf180mcu_3v3_12t_2r2w_sram_full_gds_lvs_pex.py` - Magic extraction/PEX directly from the published GDS wrappers, with parameterized blackbox, RC, extresist, resistor tee, net filtering, and timeout controls.
-- `run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py` - mandatory packaged local gate that consumes staged LVS, physical placement/routing manifests, full-GDS extraction/short audit, VDD/VSS RC smoke, KLayout density/antenna, and packaged ngspice proxy evidence.
+- `run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py` - mandatory packaged local gate that consumes staged LVS, physical placement/routing manifests, hierarchical Magic pin/LVS extraction, full-GDS extraction/short audit, VDD/VSS RC smoke, KLayout density/antenna, and packaged ngspice proxy evidence. Magic logs are hard-gated for `Bad Device Location`, missing-device, and node-extraction diagnostics.
 
 Packaged local signoff entrypoint:
 

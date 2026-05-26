@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
-"""Build final physical hard-macro abstracts for GF180MCU 12T 2R2W SRAMs.
+"""Build release physical hard-macro seed abstracts for GF180MCU 12T 2R2W SRAMs.
 
 This step emits the top-level physical hard-macro package that the rest of the
 chip can place and route against: final row-edge corridor footprint, explicit
 boundary pins, M4/M5 power straps, GDS, LEF, blackbox CDL, and SV collateral.
-
-The row-edge corridor is physical routing/footprint geometry.  The dense
-row-select transistor matrix is still bound by the structural CDL and leaf
-library; it is not expanded into one device-per-row inside this top GDS yet.
 """
 
 from __future__ import annotations
@@ -34,6 +30,14 @@ from build_gf180mcu_3v3_12t_2r2w_sram_array_macros import (
 from build_2r2w_macro_arrays import write_behavioral_model, write_decode_contract, write_spice, write_verilog
 from build_physical_cells import bbox, dims_um
 from extreme_compaction_search import read_magic
+
+
+PUBLIC_MACROS = {
+    (512, 8): "gf180mcu_3v3_12t_2r2w_sram_512x8",
+    (512, 32): "gf180mcu_3v3_12t_2r2w_sram_512x32",
+    (1024, 8): "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+    (1024, 32): "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+}
 
 
 @dataclass(frozen=True)
@@ -103,6 +107,12 @@ def sha256_file(path: Path) -> str:
         for chunk in iter(lambda: fh.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def copy_if_different(src: Path, dst: Path) -> None:
+    if src.resolve() == dst.resolve():
+        return
+    shutil.copy2(src, dst)
 
 
 def by_macro(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
@@ -558,9 +568,9 @@ def write_pins_json(path: Path, pins: list[Pin]) -> None:
 
 def build_one(args: argparse.Namespace, array: dict[str, Any], budget: dict[str, Any]) -> FinalMacro:
     source_macro = str(array["macro"])
-    macro = source_macro.replace("_rc6_fullctrl", "_rc7f_finalphys")
     rows = int(array["rows"])
     data_width = int(array["data_width"])
+    macro = PUBLIC_MACROS.get((rows, data_width), source_macro.replace("_rc6_fullctrl", "_rc7f_finalphys"))
     physical_rows = int(budget["physical_rows"])
     groups = int(budget["groups_per_physical_row"])
     tile_cell = str(array["source_tile"])
@@ -609,8 +619,8 @@ def build_one(args: argparse.Namespace, array: dict[str, Any], budget: dict[str,
     for directory in (magic_dir, gds_magic_dir, layout_dir, abstract_dir):
         directory.mkdir(parents=True, exist_ok=True)
     copied_tile_magic = magic_dir / f"{tile_cell}.mag"
-    shutil.copy2(source_tile_magic, copied_tile_magic)
-    shutil.copy2(source_tile_magic, gds_magic_dir / f"{tile_cell}.mag")
+    copy_if_different(source_tile_magic, copied_tile_magic)
+    copy_if_different(source_tile_magic, gds_magic_dir / f"{tile_cell}.mag")
     pin_shapes = build_pins(
         rows=rows,
         data_width=data_width,
@@ -684,7 +694,7 @@ def build_one(args: argparse.Namespace, array: dict[str, Any], budget: dict[str,
     drc_log = layout_dir / f"{macro}.drc.log"
     gds_log = layout_dir / f"{macro}.gds.log"
     if args.skip_magic_drc:
-        drc_log.write_text("SKIPPED: top-level Magic DRC full hierarchy is intentionally skipped for RC7F pin/PEX iteration.\n")
+        drc_log.write_text("SKIPPED: top-level Magic DRC full hierarchy is intentionally skipped for physical-seed pin iteration.\n")
         drc = None
     else:
         drc = run_magic(macro=macro, magic_dir=gds_magic_dir, script=drc_tcl, log_path=drc_log, magic=args.magic, magic_rc=args.magic_rc)
@@ -705,6 +715,29 @@ def build_one(args: argparse.Namespace, array: dict[str, Any], budget: dict[str,
     write_behavioral_model(behavioral, macro, rows, data_width)
     write_decode_contract(decode, macro, rows, data_width)
     write_pins_json(pins_json, pin_shapes)
+
+    package_dir = Path("macros") / macro
+    package_layout_dir = package_dir / "layout"
+    package_abstract_dir = package_dir / "abstract"
+    package_layout_dir.mkdir(parents=True, exist_ok=True)
+    package_abstract_dir.mkdir(parents=True, exist_ok=True)
+    package_gds = package_layout_dir / f"{macro}.gds"
+    package_lef = package_abstract_dir / f"{macro}.lef"
+    package_spice = package_abstract_dir / f"{macro}.spice"
+    package_verilog = package_abstract_dir / f"{macro}.bb.sv"
+    package_behavioral = package_abstract_dir / f"{macro}.behavioral.sv"
+    package_decode = package_abstract_dir / f"{macro}.decode_contract.sv"
+    package_pins_json = package_abstract_dir / f"{macro}.pins.json"
+    for src, dst in (
+        (gds, package_gds),
+        (lef, package_lef),
+        (spice, package_spice),
+        (verilog, package_verilog),
+        (behavioral, package_behavioral),
+        (decode, package_decode),
+        (pins_json, package_pins_json),
+    ):
+        shutil.copy2(src, dst)
 
     result = FinalMacro(
         macro=macro,
@@ -738,25 +771,26 @@ def build_one(args: argparse.Namespace, array: dict[str, Any], budget: dict[str,
         pin_count=len(pin_shapes),
         drc_errors=drc,
         magic=str(top_magic),
-        gds=str(gds),
-        lef=str(lef),
-        spice=str(spice),
-        verilog=str(verilog),
-        behavioral_model=str(behavioral),
-        decode_contract=str(decode),
-        pins_json=str(pins_json),
+        gds=str(package_gds),
+        lef=str(package_lef),
+        spice=str(package_spice),
+        verilog=str(package_verilog),
+        behavioral_model=str(package_behavioral),
+        decode_contract=str(package_decode),
+        pins_json=str(package_pins_json),
         drc_log=str(drc_log),
         gds_log=str(gds_log),
         summary_md=str(out_dir / "summary.md"),
     )
     write_macro_summary(out_dir / "summary.md", result)
+    shutil.copy2(out_dir / "summary.md", package_dir / "summary.md")
     print(f"{macro}: {width_um:.3f}um x {height_um:.3f}um = {area_mm2:.6f}mm^2, DRC={drc}, pins={len(pin_shapes)}, {footprint_status}")
     return result
 
 
 def write_macro_summary(path: Path, result: FinalMacro) -> None:
     lines = [
-        f"# {result.macro} RC7F Final Physical",
+        f"# {result.macro} Release Physical Seed",
         "",
         "| Check | Result |",
         "| --- | --- |",
@@ -772,13 +806,13 @@ def write_macro_summary(path: Path, result: FinalMacro) -> None:
         f"| Magic DRC | `{result.drc_errors}` |",
         f"| Footprint status | `{result.footprint_status}` |",
         "",
-        "This is the final hard-macro physical abstract for top-level integration:",
+        "This is the release hard-macro physical seed for top-level integration:",
         "GDS, LEF, Magic, blackbox CDL/SV, behavioral model, decode contract,",
         "row-edge corridors, boundary pins, and M4/M5 power are emitted.",
         "",
-        "The dense transistor-level row-select matrix is still represented by the",
-        "RC7 structural CDL and leaf library rather than expanded into this top",
-        "GDS one row at a time.",
+        "Downstream package gates integrate Avalon control/row-select standard",
+        "cells, column periphery leaves, and routed control/periphery shapes into",
+        "the published macro GDS before local signoff.",
         "",
     ]
     path.write_text("\n".join(lines))
@@ -793,7 +827,7 @@ def write_run_summary(out_dir: Path, results: list[FinalMacro]) -> None:
             for result in results:
                 writer.writerow(asdict(result))
     lines = [
-        "# RC7F Final Physical Macro Package",
+        "# GF180MCU 12T 2R2W SRAM Release Physical Seed Package",
         "",
         "| Macro | Shape | Size | Area | Max | DRC | Pins | Status |",
         "| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
@@ -811,14 +845,14 @@ def write_run_summary(out_dir: Path, results: list[FinalMacro]) -> None:
             "Generated artifacts per macro:",
             "",
             "- Magic top layout with repeated verified 4x4 tile array;",
-            "- final row-edge/control corridor geometry;",
+            "- row-edge/control placement corridor geometry;",
             "- physical boundary pins for control/address/data plus VDD/VSS;",
             "- M4/M5 top-level power straps;",
             "- GDS, LEF, blackbox SPICE, blackbox SV, behavioral SV, decode contract.",
             "",
-            "Remaining non-abstract physical closure: replace the row-edge corridor",
-            "with the dense transistor-level row-select/predecode matrix and run full",
-            "device LVS/PEX on that expanded top.",
+            "Final package closure is reported by the downstream stdcell,",
+            "row-select, column-periphery, full-GDS extraction, and local-signoff",
+            "reports.",
             "",
         ]
     )
@@ -850,8 +884,18 @@ def main() -> int:
         budgets = {macro: item for macro, item in budgets.items() if macro in allowed}
         if not budgets:
             raise SystemExit(f"no source macros matched --macro-filter={sorted(allowed)}")
+    arrays_by_shape = {
+        (int(item["rows"]), int(item["data_width"])): item
+        for item in arrays.values()
+    }
     args.out_dir.mkdir(parents=True, exist_ok=True)
-    results = [build_one(args, arrays[macro], budgets[macro]) for macro in sorted(budgets)]
+    results = []
+    for macro in sorted(budgets):
+        budget = budgets[macro]
+        shape = (int(budget["logical_rows"]), int(budget["data_width"]))
+        if shape not in arrays_by_shape:
+            raise SystemExit(f"no array source for {macro} shape {shape[0]}x{shape[1]}")
+        results.append(build_one(args, arrays_by_shape[shape], budget))
     write_run_summary(args.out_dir, results)
     if args.skip_magic_drc:
         return 0

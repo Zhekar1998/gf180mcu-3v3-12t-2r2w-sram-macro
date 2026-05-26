@@ -2,9 +2,7 @@
 
 This report binds the SRAM control matrix to real GF180MCU 3.3V
 Avalon standard-cell collateral for ordinary digital logic.
-The initial control matrix keeps SRAM-specific row-select/WL-buffer cells as
-logical custom leaves; the later row-select expansion report maps those leaves
-to row-pitch-compatible Avalon `NAND4 + 3*INV` physical rows.
+SRAM-specific row-select/WL-buffer cells remain custom leaves.
 
 | Macro | Physical WL Rows | Control Gates | Avalon Gates | Custom Row-Select |
 | --- | ---: | ---: | ---: | ---: |
@@ -22,7 +20,6 @@ Included Avalon collateral:
 - TT/SS/FF Liberty corners
 
 The published top macro GDS files physically contain the placed
-Avalon `INV`/`NAND`/`NOR` control stdcells after the GDS merge step. The
-row-select/WL-buffer physical expansion is in
-`reports/stdcell_row_select_gds_merge/`; periphery leaves remain separate until
-full macro periphery integration is generated.
+Avalon `INV`/`NAND`/`NOR` control stdcells after the GDS merge step.
+Custom row-select/WL-buffer and periphery leaves remain separate
+until a row-pitch-compatible row-edge integration is generated.

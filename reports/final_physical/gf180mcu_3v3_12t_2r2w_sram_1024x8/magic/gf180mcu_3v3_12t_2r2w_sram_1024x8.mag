@@ -6865,8 +6865,8 @@ flabel metal5 58556 120 58556 120 0 FreeSans 93 0 0 0 VSS
 port 79 nsew
 << properties >>
 string FIXED_BBOX 0 0 117112 123608
-string DETRONYX_PHYSICAL_MACRO detronyx_12t_2w2r_1024x8_rc7f_finalphys
-string DETRONYX_SOURCE_MACRO detronyx_12t_2w2r_1024x8_rc6_fullctrl
+string DETRONYX_PHYSICAL_MACRO gf180mcu_3v3_12t_2r2w_sram_1024x8
+string DETRONYX_SOURCE_MACRO gf180mcu_3v3_12t_2r2w_sram_1024x8_source_full_control
 string DETRONYX_SOURCE_TILE detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct
 string DETRONYX_MACRO_STATUS rc7f_final_physical_hardmacro
 string DETRONYX_CONTROL_STATUS physical_row_edge_corridors_rc7_structural_cdl_bound

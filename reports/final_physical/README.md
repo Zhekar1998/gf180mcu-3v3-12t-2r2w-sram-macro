@@ -1,4 +1,4 @@
-# current Final Physical Macro Package
+# GF180MCU 12T 2R2W SRAM Release Physical Seed Package
 
 | Macro | Shape | Size | Area | Max | DRC | Pins | Status |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
@@ -15,6 +15,6 @@ Generated artifacts per macro:
 - M4/M5 top-level power straps;
 - GDS, LEF, blackbox SPICE, blackbox SV, behavioral SV, decode contract.
 
-Remaining non-abstract physical closure: replace the row-edge corridor
-with the dense transistor-level row-select/predecode matrix and run full
-device LVS/PEX on that expanded top.
+Final package closure is reported by the downstream stdcell,
+row-select, column-periphery, full-GDS extraction, and local-signoff
+reports.

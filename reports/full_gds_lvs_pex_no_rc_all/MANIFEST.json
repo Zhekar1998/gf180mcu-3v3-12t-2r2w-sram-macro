@@ -22,7 +22,7 @@
     {
       "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
       "status": "PASS",
-      "started_utc": "2026-05-25T21:54:21.751086+00:00",
+      "started_utc": "2026-05-26T19:53:21.401391+00:00",
       "returncode": 0,
       "timed_out": false,
       "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/layout/gf180mcu_3v3_12t_2r2w_sram_512x8.gds",
@@ -33,7 +33,7 @@
       "ext_dir": "reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles",
       "lvs_spice": "reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.full_gds.current_pdk.spice",
       "rc_spice": "reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.full_gds.current_pdk_rc.spice",
-      "lvs_spice_bytes": 655286,
+      "lvs_spice_bytes": 609289,
       "rc_spice_bytes": 0,
       "electrical_shorts": [],
       "lvs_spice_stats": {
@@ -54,7 +54,7 @@
     {
       "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
       "status": "PASS",
-      "started_utc": "2026-05-25T21:54:36.320358+00:00",
+      "started_utc": "2026-05-26T19:53:36.596695+00:00",
       "returncode": 0,
       "timed_out": false,
       "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/layout/gf180mcu_3v3_12t_2r2w_sram_512x32.gds",
@@ -65,7 +65,7 @@
       "ext_dir": "reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_512x32/extfiles",
       "lvs_spice": "reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.full_gds.current_pdk.spice",
       "rc_spice": "reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_512x32/gf180mcu_3v3_12t_2r2w_sram_512x32.full_gds.current_pdk_rc.spice",
-      "lvs_spice_bytes": 1903807,
+      "lvs_spice_bytes": 1804340,
       "rc_spice_bytes": 0,
       "electrical_shorts": [],
       "lvs_spice_stats": {
@@ -86,7 +86,7 @@
     {
       "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
       "status": "PASS",
-      "started_utc": "2026-05-25T21:55:27.780755+00:00",
+      "started_utc": "2026-05-26T19:54:31.878754+00:00",
       "returncode": 0,
       "timed_out": false,
       "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds",
@@ -97,7 +97,7 @@
       "ext_dir": "reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x8/extfiles",
       "lvs_spice": "reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.full_gds.current_pdk.spice",
       "rc_spice": "reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x8/gf180mcu_3v3_12t_2r2w_sram_1024x8.full_gds.current_pdk_rc.spice",
-      "lvs_spice_bytes": 1514593,
+      "lvs_spice_bytes": 1445932,
       "rc_spice_bytes": 0,
       "electrical_shorts": [],
       "lvs_spice_stats": {
@@ -118,7 +118,7 @@
     {
       "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
       "status": "PASS",
-      "started_utc": "2026-05-25T21:56:33.556266+00:00",
+      "started_utc": "2026-05-26T19:55:38.280597+00:00",
       "returncode": 0,
       "timed_out": false,
       "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds",
@@ -129,7 +129,7 @@
       "ext_dir": "reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x32/extfiles",
       "lvs_spice": "reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.full_gds.current_pdk.spice",
       "rc_spice": "reports/full_gds_lvs_pex_no_rc_all/gf180mcu_3v3_12t_2r2w_sram_1024x32/gf180mcu_3v3_12t_2r2w_sram_1024x32.full_gds.current_pdk_rc.spice",
-      "lvs_spice_bytes": 7011396,
+      "lvs_spice_bytes": 6864794,
       "rc_spice_bytes": 0,
       "electrical_shorts": [],
       "lvs_spice_stats": {

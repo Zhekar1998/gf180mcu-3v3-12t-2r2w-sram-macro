@@ -23,7 +23,7 @@
       "route_records": 128,
       "route_shapes": 729,
       "density_fill_shapes": 5162,
-      "cleared_core_fill_shapes": 0,
+      "cleared_core_fill_shapes": 574,
       "direct_child_counts": {
         "detronyx_12t_precharge_sense_rc1": 16,
         "detronyx_12t_write_driver_rc1": 16,
@@ -63,7 +63,7 @@
       "route_records": 512,
       "route_shapes": 2930,
       "density_fill_shapes": 15799,
-      "cleared_core_fill_shapes": 0,
+      "cleared_core_fill_shapes": 1887,
       "direct_child_counts": {
         "detronyx_12t_precharge_sense_rc1": 64,
         "detronyx_12t_write_driver_rc1": 64,
@@ -103,7 +103,7 @@
       "route_records": 128,
       "route_shapes": 729,
       "density_fill_shapes": 9372,
-      "cleared_core_fill_shapes": 0,
+      "cleared_core_fill_shapes": 719,
       "direct_child_counts": {
         "detronyx_12t_precharge_sense_rc1": 16,
         "detronyx_12t_write_driver_rc1": 16,
@@ -143,7 +143,7 @@
       "route_records": 512,
       "route_shapes": 2930,
       "density_fill_shapes": 30769,
-      "cleared_core_fill_shapes": 0,
+      "cleared_core_fill_shapes": 1772,
       "direct_child_counts": {
         "detronyx_12t_precharge_sense_rc1": 64,
         "detronyx_12t_write_driver_rc1": 64,
