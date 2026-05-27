@@ -22,8 +22,17 @@ LAYER_V2 = [38, 0].freeze
 LAYER_M3 = [42, 0].freeze
 LAYER_V3 = [40, 0].freeze
 LAYER_M4 = [46, 0].freeze
+LAYER_V4 = [41, 0].freeze
+LAYER_M5 = [81, 0].freeze
 GRID_UM = 0.005
-ROUTE_LAYERS = [LAYER_M1, LAYER_V1, LAYER_M2, LAYER_V2, LAYER_M3, LAYER_V3, LAYER_M4].freeze
+ROUTE_LAYERS = [LAYER_M1, LAYER_V1, LAYER_M2, LAYER_V2, LAYER_M3, LAYER_V3, LAYER_M4, LAYER_V4, LAYER_M5].freeze
+TILE_WL_LOCAL_X_UM = 0.150
+TILE_WL_LOCAL_Y_UM = {
+  "w0" => [0.450, 4.310, 8.170, 12.030],
+  "w1" => [1.650, 5.510, 9.370, 13.230],
+  "r0" => [1.000, 4.860, 8.720, 12.580],
+  "r1" => [2.350, 6.210, 10.070, 13.930]
+}.freeze
 $shape_index = nil
 
 def rel(path)
@@ -94,15 +103,18 @@ def build_shape_index(cell, layout, pairs)
 end
 
 def delete_box(cell, layout, pair, target)
-  return unless $shape_index
+  return 0 unless $shape_index
   layer_index = layer(layout, pair)
   matches = $shape_index.fetch(layer_index, {}).delete(box_key(target)) || []
   matches.each { |shape| shape.delete }
+  matches.length
 end
 
 def delete_rect(cell, layout, pair, x0, y0, x1, y1)
-  delete_box(cell, layout, pair, box_um_raw(layout, x0, y0, x1, y1))
-  delete_box(cell, layout, pair, box_um(layout, x0, y0, x1, y1))
+  deleted = 0
+  deleted += delete_box(cell, layout, pair, box_um_raw(layout, x0, y0, x1, y1))
+  deleted += delete_box(cell, layout, pair, box_um(layout, x0, y0, x1, y1))
+  deleted
 end
 
 def add_rect(cell, layout, pair, x0, y0, x1, y1)
@@ -123,6 +135,47 @@ def add_stack_m1_to_m4(cell, layout, x, y)
   add_rect(cell, layout, LAYER_M3, x - 0.18, y - 0.18, x + 0.18, y + 0.18)
   add_rect(cell, layout, LAYER_V3, x - 0.11, y - 0.11, x + 0.11, y + 0.11)
   add_rect(cell, layout, LAYER_M4, x - 0.20, y - 0.20, x + 0.20, y + 0.20)
+end
+
+def add_stack_m4_to_m5(cell, layout, x, y)
+  add_rect(cell, layout, LAYER_M4, x - 0.20, y - 0.20, x + 0.20, y + 0.20)
+  add_rect(cell, layout, LAYER_V4, x - 0.11, y - 0.11, x + 0.11, y + 0.11)
+  add_rect(cell, layout, LAYER_M5, x - 0.22, y - 0.22, x + 0.22, y + 0.22)
+end
+
+def tile_wl_target(macro_item, row)
+  row_index = row.fetch("row_index").to_i
+  port = row.fetch("port")
+  local_y = TILE_WL_LOCAL_Y_UM.fetch(port).fetch(row_index % 4)
+  tile_row = row_index / 4
+  tile_pitch_y = macro_item.fetch("tile_height_um").to_f + macro_item.fetch("tile_gap_um").to_f
+  [
+    macro_item.fetch("row_edge_total_width_um").to_f + TILE_WL_LOCAL_X_UM,
+    macro_item.fetch("control_bottom_um").to_f + tile_row * tile_pitch_y + local_y
+  ]
+end
+
+def remove_legacy_wl_stubs(target, layout, macro_item)
+  y0 = macro_item.fetch("control_bottom_um").to_f
+  y1 = macro_item.fetch("height_um").to_f - macro_item.fetch("control_top_um").to_f
+  physical_rows = macro_item.fetch("physical_rows").to_i
+  return 0 if physical_rows <= 0
+
+  predecode = macro_item.fetch("predecode_width_um").to_f
+  strip = macro_item.fetch("port_strip_width_um").to_f
+  pitch = (y1 - y0) / physical_rows
+  stub_h = 0.12
+  lane_margin = [0.20, strip / 5.0].min
+  deleted = 0
+  physical_rows.times do |row|
+    y = y0 + row * pitch + pitch / 2.0
+    4.times do |idx|
+      x0 = predecode + idx * strip + lane_margin
+      x1 = predecode + (idx + 1) * strip - lane_margin
+      deleted += delete_rect(target, layout, LAYER_M4, x0, y - stub_h, x1, y + stub_h)
+    end
+  end
+  deleted
 end
 
 def direct_counts(layout, top)
@@ -207,11 +260,12 @@ rowsel.fetch("results").each do |item|
   end
 
   $shape_index = build_shape_index(target, layout, ROUTE_LAYERS)
+  legacy_wl_stub_shapes_removed = remove_legacy_wl_stubs(target, layout, macro_item)
 
-    grouped = rows.group_by { |row| row.fetch("original_name") }
-    grouped.each_value do |cells|
-      by_role = cells.to_h { |row| [row.fetch("role"), row] }
-      nand = by_role["nand4"] || by_role["nand3"]
+  grouped = rows.group_by { |row| row.fetch("original_name") }
+  grouped.each_value do |cells|
+    by_role = cells.to_h { |row| [row.fetch("role"), row] }
+    nand = by_role["nand4"] || by_role["nand3"]
       inv0 = by_role.fetch("buf0")
       inv1 = by_role.fetch("buf1")
       inv2 = by_role.fetch("buf2")
@@ -221,17 +275,18 @@ rowsel.fetch("results").each do |item|
       [[nand, inv0, 6.64, 0.49], [inv0, inv1, 1.18, 0.49], [inv1, inv2, 1.18, 0.49]].each do |src, dst, src_dx, dst_dx|
         x0 = src.fetch("x_um").to_f + src_dx
         x1 = dst.fetch("x_um").to_f + dst_dx
-        add_rect(target, layout, LAYER_M1, [x0, x1].min, route_y - 0.12, [x0, x1].max, route_y + 0.12)
-        route_shapes += 1
-      end
-      # Tie final INV output to the existing M4 WL landing stub.
-      wl_x = inv2.fetch("x_um").to_f + 1.18
-      pitch = macro_item.fetch("array_height_um").to_f / macro_item.fetch("physical_rows").to_f
-      wl_y = macro_item.fetch("control_bottom_um").to_f + nand.fetch("row_index").to_i * pitch + pitch / 2.0
-      add_rect(target, layout, LAYER_M1, wl_x - 0.12, [route_y, wl_y].min, wl_x + 0.12, [route_y, wl_y].max)
-      add_stack_m1_to_m4(target, layout, wl_x, wl_y)
-      route_shapes += 8
+      add_rect(target, layout, LAYER_M1, [x0, x1].min, route_y - 0.12, [x0, x1].max, route_y + 0.12)
+      route_shapes += 1
     end
+    # Tie final INV output to the actual tile WL/RWL M5 landing pin.
+    wl_x = inv2.fetch("x_um").to_f + 1.18
+    tile_x, wl_y = tile_wl_target(macro_item, nand)
+    add_rect(target, layout, LAYER_M1, wl_x - 0.12, [route_y, wl_y].min, wl_x + 0.12, [route_y, wl_y].max)
+    add_stack_m1_to_m4(target, layout, wl_x, wl_y)
+    add_rect(target, layout, LAYER_M4, [wl_x, tile_x].min, wl_y - 0.16, [wl_x, tile_x].max, wl_y + 0.16)
+    add_stack_m4_to_m5(target, layout, tile_x, wl_y)
+    route_shapes += 12
+  end
 
     # Stitch local standard-cell rails per port to M2 vertical trunks and into
     # bottom/top control-band M4 power rails.  This gives the row-select rows a
@@ -300,6 +355,8 @@ rowsel.fetch("results").each do |item|
     "inserted_stdcells" => inserted,
     "row_select_stdcells" => expected_delta.values.sum,
     "route_shapes_added" => route_shapes,
+    "legacy_wl_stub_shapes_removed" => legacy_wl_stub_shapes_removed,
+    "wl_route_policy" => "row-select INV outputs route directly to real 4x4 tile WL/RWL metal5 landing pins; no abstract M4 row-center stubs",
     "expected_delta_counts" => expected_delta.sort.to_h,
     "direct_avalon_instance_counts" => final_counts.sort.to_h,
     "footprint_unchanged" => fp,
@@ -323,7 +380,7 @@ lines = [
   "# Row-Select Stdcell GDS Merge",
   "",
   "Row-select/WL-buffer functions are physically implemented with Avalon NAND/INV stdcells inside the existing row-edge strips.",
-  "This closes physical row-select stdcell presence and WL-stub stitching. Upstream control/predecode routing is handled by `route_gf180mcu_3v3_12t_2r2w_sram_control_signals.rb`.",
+  "This closes physical row-select stdcell presence and routes WL-buffer outputs directly to the real 4x4 tile WL/RWL metal5 landing pins. Upstream control/predecode routing is handled by `route_gf180mcu_3v3_12t_2r2w_sram_control_signals.rb`.",
   "",
   "| Macro | Status | Row-select stdcells | Newly inserted this run | Route shapes | Footprint |",
   "| --- | --- | ---: | ---: | ---: | --- |"

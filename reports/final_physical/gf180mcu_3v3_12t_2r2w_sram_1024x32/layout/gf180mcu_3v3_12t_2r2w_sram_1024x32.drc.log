@@ -13,9 +13,6 @@ Scaled tech values by 10 / 1 to match internal grid scaling
 Loading gf180mcuD Device Generator Menu ...
 Using technology "gf180mcuD", version 1.0.532-2-gc6d73a3
 Cell gf180mcu_3v3_12t_2r2w_sram_1024x32 read from current working directory
-gf180mcu_3v3_12t_2r2w_sram_1024x32: 10000 rects
-gf180mcu_3v3_12t_2r2w_sram_1024x32: 20000 rects
-gf180mcu_3v3_12t_2r2w_sram_1024x32: 30000 rects
 DRC style is now "drc(full)"
 Cell detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct read from current working directory
 Processing timestamp mismatches.

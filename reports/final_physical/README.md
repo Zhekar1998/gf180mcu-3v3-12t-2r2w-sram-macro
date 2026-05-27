@@ -10,7 +10,7 @@
 Generated artifacts per macro:
 
 - Magic top layout with repeated verified 4x4 tile array;
-- final row-edge/control corridor geometry;
+- row-edge/control placement corridor geometry;
 - physical boundary pins for control/address/data plus VDD/VSS;
 - M4/M5 top-level power straps;
 - GDS, LEF, blackbox SPICE, blackbox SV, behavioral SV, decode contract.

@@ -296,6 +296,27 @@ def column_periphery_summary(root: Path, manifest_path: Path) -> tuple[str, str]
     return "PASS", f"macros={len(results)}, column_leaf_instances={instances}, route_shapes={route_shapes}, expanded_wrapper=True"
 
 
+def pin_route_alignment_summary(root: Path, manifest_path: Path) -> tuple[str, str]:
+    if not file_ok(manifest_path):
+        return "FAIL", f"missing pin/route alignment manifest: {manifest_path}"
+    manifest = load_json(manifest_path)
+    checks = manifest.get("checks", [])
+    bad = [check for check in checks if check.get("status") != "PASS"]
+    audit = root / str(manifest.get("audit", ""))
+    audit_detail = ""
+    if file_ok(audit):
+        audit_manifest = load_json(audit)
+        results = audit_manifest.get("results", [])
+        row_points = sum(int(item.get("row_select", {}).get("checked_points", 0)) for item in results)
+        col_points = sum(int(item.get("column_periphery", {}).get("checked_points", 0)) for item in results)
+        dummy_shapes = sum(int(item.get("dummy_route_layer_total", 0)) for item in results)
+        legacy_stubs = sum(int(item.get("legacy_m4_wl_stub_like_shapes", 0)) for item in results)
+        audit_detail = f", row_points={row_points}, column_points={col_points}, dummy_route_shapes={dummy_shapes}, legacy_wl_stubs={legacy_stubs}"
+    if manifest.get("status") != "PASS" or bad:
+        return "FAIL", f"status={manifest.get('status')}, bad_checks={bad[:3]}{audit_detail}"
+    return "PASS", f"checks={len(checks)}, counts={manifest.get('counts')}{audit_detail}"
+
+
 def full_gds_extract_summary(root: Path, manifest_path: Path, macro: str) -> tuple[str, str]:
     if not file_ok(manifest_path):
         return "FAIL", f"missing full-GDS extraction manifest: {manifest_path}"
@@ -784,6 +805,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--row-select-gds-manifest", type=Path, default=Path("reports/stdcell_row_select_gds_merge/MANIFEST.json"))
     parser.add_argument("--stdcell-routing-manifest", type=Path, default=Path("reports/stdcell_control_signal_routing/MANIFEST.json"))
     parser.add_argument("--column-periphery-manifest", type=Path, default=Path("reports/column_periphery_gds_merge/MANIFEST.json"))
+    parser.add_argument("--pin-route-alignment-manifest", type=Path, default=Path("verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/MANIFEST.json"))
     parser.add_argument("--full-gds-extract-manifest", type=Path, default=Path("reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json"))
     parser.add_argument("--full-gds-power-rc-manifest", type=Path, default=Path("reports/full_gds_lvs_pex_power_rc/MANIFEST.json"))
     parser.add_argument("--out-dir", type=Path, required=True)
@@ -902,6 +924,16 @@ def main() -> int:
         column_status,
         args.column_periphery_manifest,
         column_detail,
+    )
+
+    pin_route_status, pin_route_detail = pin_route_alignment_summary(root, args.pin_route_alignment_manifest)
+    add(
+        checks,
+        "Physical",
+        "GDS pin/route alignment and stale-shape audit",
+        pin_route_status,
+        args.pin_route_alignment_manifest,
+        pin_route_detail,
     )
 
     density_deck = args.gf180_klayout_drc_dir / "rule_decks" / "density.drc"

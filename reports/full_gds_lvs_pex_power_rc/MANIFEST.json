@@ -25,7 +25,7 @@
     {
       "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
       "status": "PASS",
-      "started_utc": "2026-05-26T20:02:40.006329+00:00",
+      "started_utc": "2026-05-27T18:54:27.800767+00:00",
       "returncode": 0,
       "timed_out": false,
       "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/layout/gf180mcu_3v3_12t_2r2w_sram_512x8.gds",
@@ -36,8 +36,8 @@
       "ext_dir": "reports/full_gds_lvs_pex_power_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/extfiles",
       "lvs_spice": "reports/full_gds_lvs_pex_power_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.full_gds.current_pdk.spice",
       "rc_spice": "reports/full_gds_lvs_pex_power_rc/gf180mcu_3v3_12t_2r2w_sram_512x8/gf180mcu_3v3_12t_2r2w_sram_512x8.full_gds.current_pdk_rc.spice",
-      "lvs_spice_bytes": 609289,
-      "rc_spice_bytes": 609289,
+      "lvs_spice_bytes": 582085,
+      "rc_spice_bytes": 582085,
       "electrical_shorts": [],
       "lvs_spice_stats": {
         "subckt": 10,

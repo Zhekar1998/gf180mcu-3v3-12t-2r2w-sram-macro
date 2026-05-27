@@ -455,7 +455,11 @@ plan.fetch("results").each do |item|
   new_h = item.fetch("new_height_um").to_f
   route_shapes += add_rect(route_cell, layout, LAYER_M5, 0, 0, new_w, POWER_RAIL_W)
   route_shapes += add_rect(route_cell, layout, LAYER_M5, 0, new_h - POWER_RAIL_W, new_w, new_h)
-  density_fill_shapes = add_wrapper_density_fill(route_cell, layout, item, instances)
+  # Route cells must contain only intentional signal/power route geometry.
+  # Manual dummy fill/poly was too easy to confuse with real connectivity in
+  # KLayout review and extraction audits, so density closure is a separate
+  # signoff/fill step instead of part of the route wrapper.
+  density_fill_shapes = 0
 
   top.insert(RBA::CellInstArray.new(route_cell.cell_index, RBA::Trans.new(RBA::Trans::R0, 0, 0)))
   bbox = bbox_um(top, layout)
@@ -496,6 +500,7 @@ plan.fetch("results").each do |item|
     "route_records" => route_rows.length,
     "route_shapes" => route_shapes,
     "density_fill_shapes" => density_fill_shapes,
+    "density_fill_policy" => "disabled in column_periphery_routes; use a dedicated signoff fill step after routed connectivity is closed",
     "cleared_core_fill_shapes" => cleared_fill_shapes,
     "direct_child_counts" => counts.sort.to_h,
     "bbox_before_um" => old_bbox,
@@ -526,7 +531,7 @@ File.write(File.join(OUT, "MANIFEST.json"), JSON.pretty_generate(manifest) + "\n
 lines = [
   "# Column Periphery GDS Merge",
   "",
-  "The published macro GDS tops are compact hybrid wrappers containing the original array/control core, per-bit read/write column leaves, route geometry, and top/bottom M5 wrapper rails. The placement consumes existing top/bottom control bands before growing the wrapper, and clears only local old density/fill keepouts under the new column leaves. Long per-leaf M5 power taps are intentionally disabled until a dedicated PDN router is added.",
+  "The published macro GDS tops are compact hybrid wrappers containing the original array/control core, per-bit read/write column leaves, route geometry, and top/bottom M5 wrapper rails. The placement consumes existing top/bottom control bands before growing the wrapper, and clears only local old density/fill keepouts under the new column leaves. The route wrapper intentionally emits no manual dummy fill/poly; density closure belongs in a separate signoff fill step after routed connectivity is closed. Long per-leaf M5 power taps are intentionally disabled until a dedicated PDN router is added.",
   "",
   "| Macro | Status | Instances | Routes | Route shapes | New bbox |",
   "| --- | --- | ---: | ---: | ---: | --- |"

@@ -57,6 +57,13 @@
       "status": "PASS"
     },
     {
+      "area": "Physical",
+      "check": "GDS pin/route alignment and stale-shape audit",
+      "detail": "checks=16, counts={'PASS': 16}, row_points=13824, column_points=3360, dummy_route_shapes=0, legacy_wl_stubs=0",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/MANIFEST.json",
+      "status": "PASS"
+    },
+    {
       "area": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
       "check": "Magic final macro DRC",
       "detail": "manifest_drc=0, parsed_drc=0",
@@ -87,9 +94,9 @@
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
       "check": "KLayout GF180 density deck",
-      "detail": "returncode=0, violations=0, sample_categories=[]",
+      "detail": "returncode=0, violations=1948199, sample_categories=[\"'M1.4'\", \"'M2.4'\", \"'M3.4'\", \"'M5.4'\", \"'MT.3'\", \"'PL.8'\"]",
       "evidence": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x32/density/gf180mcu_3v3_12t_2r2w_sram_1024x32.density.lyrdb",
-      "status": "PASS"
+      "status": "FAIL"
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
@@ -136,9 +143,9 @@
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
       "check": "KLayout GF180 density deck",
-      "detail": "returncode=0, violations=0, sample_categories=[]",
+      "detail": "returncode=0, violations=494775, sample_categories=[\"'M1.4'\", \"'M2.4'\", \"'M3.4'\", \"'M5.4'\", \"'MT.3'\", \"'PL.8'\"]",
       "evidence": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x8/density/gf180mcu_3v3_12t_2r2w_sram_1024x8.density.lyrdb",
-      "status": "PASS"
+      "status": "FAIL"
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
@@ -185,9 +192,9 @@
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_512x32",
       "check": "KLayout GF180 density deck",
-      "detail": "returncode=0, violations=0, sample_categories=[]",
+      "detail": "returncode=0, violations=996968, sample_categories=[\"'M1.4'\", \"'M2.4'\", \"'M3.4'\", \"'M5.4'\", \"'MT.3'\", \"'PL.8'\"]",
       "evidence": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x32/density/gf180mcu_3v3_12t_2r2w_sram_512x32.density.lyrdb",
-      "status": "PASS"
+      "status": "FAIL"
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_512x32",
@@ -234,9 +241,9 @@
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_512x8",
       "check": "KLayout GF180 density deck",
-      "detail": "returncode=0, violations=0, sample_categories=[]",
+      "detail": "returncode=0, violations=276187, sample_categories=[\"'M1.4'\", \"'M2.4'\", \"'M3.4'\", \"'M4.4'\", \"'M5.4'\", \"'MT.3'\", \"'PL.8'\"]",
       "evidence": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x8/density/gf180mcu_3v3_12t_2r2w_sram_512x8.density.lyrdb",
-      "status": "PASS"
+      "status": "FAIL"
     },
     {
       "area": "gf180mcu_3v3_12t_2r2w_sram_512x8",
@@ -276,15 +283,16 @@
     {
       "area": "PEX",
       "check": "512x8 full-GDS VDD/VSS RC smoke",
-      "detail": "macros=['gf180mcu_3v3_12t_2r2w_sram_512x8'], shorts=0, rc_spice_bytes=[609289]",
+      "detail": "macros=['gf180mcu_3v3_12t_2r2w_sram_512x8'], shorts=0, rc_spice_bytes=[582085]",
       "evidence": "reports/full_gds_lvs_pex_power_rc/MANIFEST.json",
       "status": "PASS"
     }
   ],
-  "created_utc": "2026-05-26T20:10:58.087139+00:00",
-  "overall_status": "WARN",
+  "created_utc": "2026-05-27T19:12:03.259055+00:00",
+  "overall_status": "FAIL",
   "status_counts": {
-    "PASS": 36,
+    "FAIL": 4,
+    "PASS": 33,
     "WARN": 4
   },
   "tool_runs": {
@@ -320,32 +328,61 @@
     },
     "klayout_density": {
       "gf180mcu_3v3_12t_2r2w_sram_1024x32": {
-        "categories": [],
+        "categories": [
+          "'M1.4'",
+          "'M2.4'",
+          "'M3.4'",
+          "'M5.4'",
+          "'MT.3'",
+          "'PL.8'"
+        ],
         "log": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x32/density/gf180mcu_3v3_12t_2r2w_sram_1024x32.density.log",
         "report": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x32/density/gf180mcu_3v3_12t_2r2w_sram_1024x32.density.lyrdb",
         "returncode": 0,
-        "violations": 0
+        "violations": 1948199
       },
       "gf180mcu_3v3_12t_2r2w_sram_1024x8": {
-        "categories": [],
+        "categories": [
+          "'M1.4'",
+          "'M2.4'",
+          "'M3.4'",
+          "'M5.4'",
+          "'MT.3'",
+          "'PL.8'"
+        ],
         "log": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x8/density/gf180mcu_3v3_12t_2r2w_sram_1024x8.density.log",
         "report": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x8/density/gf180mcu_3v3_12t_2r2w_sram_1024x8.density.lyrdb",
         "returncode": 0,
-        "violations": 0
+        "violations": 494775
       },
       "gf180mcu_3v3_12t_2r2w_sram_512x32": {
-        "categories": [],
+        "categories": [
+          "'M1.4'",
+          "'M2.4'",
+          "'M3.4'",
+          "'M5.4'",
+          "'MT.3'",
+          "'PL.8'"
+        ],
         "log": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x32/density/gf180mcu_3v3_12t_2r2w_sram_512x32.density.log",
         "report": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x32/density/gf180mcu_3v3_12t_2r2w_sram_512x32.density.lyrdb",
         "returncode": 0,
-        "violations": 0
+        "violations": 996968
       },
       "gf180mcu_3v3_12t_2r2w_sram_512x8": {
-        "categories": [],
+        "categories": [
+          "'M1.4'",
+          "'M2.4'",
+          "'M3.4'",
+          "'M4.4'",
+          "'M5.4'",
+          "'MT.3'",
+          "'PL.8'"
+        ],
         "log": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x8/density/gf180mcu_3v3_12t_2r2w_sram_512x8.density.log",
         "report": "reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_512x8/density/gf180mcu_3v3_12t_2r2w_sram_512x8.density.lyrdb",
         "returncode": 0,
-        "violations": 0
+        "violations": 276187
       }
     },
     "magic_pex": {

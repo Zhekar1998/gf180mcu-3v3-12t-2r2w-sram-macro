@@ -1,0 +1,122 @@
+{
+  "audit": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+  "checks": [
+    {
+      "check": "dummy route fill/poly absent",
+      "detail": "dummy_route_layer_shapes={'30/0': 0, '34/4': 0, '36/4': 0, '42/4': 0, '46/4': 0, '81/4': 0}",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "legacy M4 WL stubs absent",
+      "detail": "legacy_m4_wl_stub_like_shapes=0",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select pins coincide with routed WL/RWL lines",
+      "detail": "checked=1536 missing=0",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "column periphery pins coincide with routed lines",
+      "detail": "checked=336 missing=0",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS"
+    },
+    {
+      "check": "dummy route fill/poly absent",
+      "detail": "dummy_route_layer_shapes={'30/0': 0, '34/4': 0, '36/4': 0, '42/4': 0, '46/4': 0, '81/4': 0}",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "legacy M4 WL stubs absent",
+      "detail": "legacy_m4_wl_stub_like_shapes=0",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select pins coincide with routed WL/RWL lines",
+      "detail": "checked=3072 missing=0",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "column periphery pins coincide with routed lines",
+      "detail": "checked=1344 missing=0",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS"
+    },
+    {
+      "check": "dummy route fill/poly absent",
+      "detail": "dummy_route_layer_shapes={'30/0': 0, '34/4': 0, '36/4': 0, '42/4': 0, '46/4': 0, '81/4': 0}",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "legacy M4 WL stubs absent",
+      "detail": "legacy_m4_wl_stub_like_shapes=0",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select pins coincide with routed WL/RWL lines",
+      "detail": "checked=3072 missing=0",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "column periphery pins coincide with routed lines",
+      "detail": "checked=336 missing=0",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS"
+    },
+    {
+      "check": "dummy route fill/poly absent",
+      "detail": "dummy_route_layer_shapes={'30/0': 0, '34/4': 0, '36/4': 0, '42/4': 0, '46/4': 0, '81/4': 0}",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "legacy M4 WL stubs absent",
+      "detail": "legacy_m4_wl_stub_like_shapes=0",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "row-select pins coincide with routed WL/RWL lines",
+      "detail": "checked=6144 missing=0",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    },
+    {
+      "check": "column periphery pins coincide with routed lines",
+      "detail": "checked=1344 missing=0",
+      "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.json",
+      "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "PASS": 16
+  },
+  "status": "PASS",
+  "stderr": "verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/pin_route_alignment_audit.stderr.log"
+}

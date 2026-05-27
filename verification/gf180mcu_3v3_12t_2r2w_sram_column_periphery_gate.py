@@ -103,6 +103,8 @@ def main() -> int:
             leaf_count = sum(value for key, value in counts.items() if key.startswith("detronyx_12t_") and ("write_driver" in key or "precharge_sense" in key))
             add(results, macro, "leaf cells present in top", "PASS" if leaf_count == item["instances_expected"] else "FAIL", f"leaf_count={leaf_count} expected={item['instances_expected']}", GDS)
             add(results, macro, "route cell present", "PASS" if item.get("route_shapes", 0) > 0 else "FAIL", f"route_cell={item.get('route_cell')} shapes={item.get('route_shapes')}", GDS)
+            density_fill_shapes = int(item.get("density_fill_shapes", -1))
+            add(results, macro, "route cell dummy fill disabled", "PASS" if density_fill_shapes == 0 else "FAIL", f"density_fill_shapes={density_fill_shapes}", GDS)
             audit_status, audit_detail, audit_evidence = run_m5_power_audit(macro, ROOT / item["gds"])
             add(results, macro, "M5 VDD/VSS short audit", audit_status, audit_detail, audit_evidence)
 

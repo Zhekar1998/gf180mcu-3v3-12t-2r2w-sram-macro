@@ -1417,18 +1417,9 @@
     "synthetic_spice": "build/cap_pex_timing/openrcx_geometry/gf180mcu_3v3_12t_2r2w_sram_capmini_16x16.openrcx_caps.spice"
   },
   "pex": {
-    "log": "build/cap_pex_timing/pex/gf180mcu_3v3_12t_2r2w_sram_capmini_16x16.magic_cap_pex.log",
-    "returncode": 0,
-    "spice": "build/cap_pex_timing/pex/gf180mcu_3v3_12t_2r2w_sram_capmini_16x16.cap_pex.spice",
-    "stats": {
-      "bytes": 906787,
-      "capacitors": 0,
-      "instances": 4512,
-      "mos": 0,
-      "resistors": 8017,
-      "subckt": 0
-    },
-    "tcl": "build/cap_pex_timing/pex/run_cap_pex.tcl"
+    "artifact_status": "omitted_invalid_prior_attempt",
+    "note": "Native Magic C-PEX is not the source for this timing proxy. The release package keeps the OpenRCX geometry fallback capacitance model and omits the invalid prior mini-array extraction artifact.",
+    "packaged_files": []
   },
   "rthresh_ohm": 0.1,
   "status": "WARN"

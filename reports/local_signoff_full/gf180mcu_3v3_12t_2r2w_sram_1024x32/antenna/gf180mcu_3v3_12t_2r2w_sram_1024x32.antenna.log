@@ -1,84 +1,84 @@
-2026-05-26 23:03:43 +0300: Memory Usage (576944K) : Starting running GF180MCU Klayout DRC runset on /home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds
-2026-05-26 23:03:43 +0300: Memory Usage (576944K) : Ruby Version for klayout: 3.2.3
-2026-05-26 23:03:43 +0300: Memory Usage (583736K) : Loading database to memory is complete.
-2026-05-26 23:03:43 +0300: Memory Usage (583736K) : GF180MCU Klayout antenna DRC runset output at: /home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x32/antenna/gf180mcu_3v3_12t_2r2w_sram_1024x32.antenna.lyrdb
-2026-05-26 23:03:43 +0300: Memory Usage (583736K) : Evaluate switches.
-2026-05-26 23:03:43 +0300: Memory Usage (583736K) : Number of threads to use 1
-2026-05-26 23:03:43 +0300: Memory Usage (583736K) : Verbose mode: 
-2026-05-26 23:03:43 +0300: Memory Usage (583736K) : flat  mode is enabled.
-2026-05-26 23:03:43 +0300: Memory Usage (583736K) : METAL_TOP Selected is 9K
-2026-05-26 23:03:43 +0300: Memory Usage (583736K) : METAL_STACK Selected is 5LM
-2026-05-26 23:03:43 +0300: Memory Usage (583736K) : MIM Option selected: B
-2026-05-26 23:03:43 +0300: Memory Usage (583736K) : Read in polygons from layers.
-2026-05-26 23:03:44 +0300: Memory Usage (676200K) : comp has 274504 polygons
-2026-05-26 23:03:44 +0300: Memory Usage (676200K) : dualgate has 0 polygons
-2026-05-26 23:03:45 +0300: Memory Usage (716020K) : poly2 has 265153 polygons
-2026-05-26 23:03:45 +0300: Memory Usage (759104K) : nplus has 10376 polygons
-2026-05-26 23:03:46 +0300: Memory Usage (716096K) : pplus has 35014 polygons
-2026-05-26 23:03:47 +0300: Memory Usage (907676K) : contact has 1066234 polygons
-2026-05-26 23:03:50 +0300: Memory Usage (1032516K) : metal1_drawn has 708552 polygons
-2026-05-26 23:03:50 +0300: Memory Usage (1032516K) : metal1_dummy has 5948 polygons
-2026-05-26 23:03:51 +0300: Memory Usage (1112424K) : metal1_label has 13295 polygons
-2026-05-26 23:03:51 +0300: Memory Usage (1112424K) : metal1_slot has 0 polygons
-2026-05-26 23:03:51 +0300: Memory Usage (1112424K) : metal1_blk has 0 polygons
-2026-05-26 23:03:51 +0300: Memory Usage (1112424K) : via1 has 14732 polygons
-2026-05-26 23:03:52 +0300: Memory Usage (1133004K) : metal2_drawn has 505449 polygons
-2026-05-26 23:03:52 +0300: Memory Usage (1133004K) : metal2_dummy has 5948 polygons
-2026-05-26 23:03:52 +0300: Memory Usage (1212516K) : metal2_label has 0 polygons
-2026-05-26 23:03:52 +0300: Memory Usage (1212516K) : metal2_slot has 0 polygons
-2026-05-26 23:03:52 +0300: Memory Usage (1212516K) : metal2_blk has 0 polygons
-2026-05-26 23:03:52 +0300: Memory Usage (1212516K) : via2 has 27086 polygons
-2026-05-26 23:03:55 +0300: Memory Usage (1306840K) : metal3_drawn has 392147 polygons
-2026-05-26 23:03:55 +0300: Memory Usage (1306840K) : metal3_dummy has 5948 polygons
-2026-05-26 23:03:55 +0300: Memory Usage (1340912K) : metal3_label has 0 polygons
-2026-05-26 23:03:55 +0300: Memory Usage (1340912K) : metal3_slot has 0 polygons
-2026-05-26 23:03:55 +0300: Memory Usage (1340912K) : metal3_blk has 0 polygons
-2026-05-26 23:03:55 +0300: Memory Usage (1371644K) : via3 has 394804 polygons
-2026-05-26 23:03:57 +0300: Memory Usage (1442464K) : metal4_drawn has 186515 polygons
-2026-05-26 23:03:57 +0300: Memory Usage (1442464K) : metal4_dummy has 5948 polygons
-2026-05-26 23:03:57 +0300: Memory Usage (1450892K) : metal4_label has 0 polygons
-2026-05-26 23:03:57 +0300: Memory Usage (1450892K) : metal4_slot has 0 polygons
-2026-05-26 23:03:57 +0300: Memory Usage (1450892K) : metal4_blk has 0 polygons
-2026-05-26 23:03:57 +0300: Memory Usage (1469528K) : via4 has 149078 polygons
-2026-05-26 23:03:58 +0300: Memory Usage (1501068K) : metal5_drawn has 35965 polygons
-2026-05-26 23:03:58 +0300: Memory Usage (1501068K) : metal5_dummy has 5948 polygons
-2026-05-26 23:03:58 +0300: Memory Usage (1501068K) : metal5_label has 0 polygons
-2026-05-26 23:03:58 +0300: Memory Usage (1501068K) : metal5_slot has 0 polygons
-2026-05-26 23:03:58 +0300: Memory Usage (1501068K) : metal5_blk has 0 polygons
-2026-05-26 23:03:58 +0300: Memory Usage (1501068K) : res_mk has 0 polygons
-2026-05-26 23:03:58 +0300: Memory Usage (1501068K) : fusetop has 0 polygons
-2026-05-26 23:03:58 +0300: Memory Usage (1501068K) : Starting GF180MCU ANTENNA layer derivations.
-2026-05-26 23:04:01 +0300: Memory Usage (1618644K) : Starting GF180MCU ANTENNA DRC rules.
-2026-05-26 23:04:01 +0300: Memory Usage (1618644K) : Construct connectivity for POLY
-2026-05-26 23:04:01 +0300: Memory Usage (1618644K) : Executing rule ANT.1
-2026-05-26 23:04:04 +0300: Memory Usage (1942692K) : Construct connectivity for CONTACT
-2026-05-26 23:04:05 +0300: Memory Usage (1897656K) : Executing rule ANT.8
-2026-05-26 23:04:10 +0300: Memory Usage (2393996K) : Construct connectivity for METAL1
-2026-05-26 23:04:11 +0300: Memory Usage (2205576K) : Executing rule ANT.16_i_ANT.2
-2026-05-26 23:04:20 +0300: Memory Usage (2258304K) : Executing rule ANT.16_ii_ANT.2
-2026-05-26 23:04:21 +0300: Memory Usage (2258304K) : Construct connectivity for VIA1
-2026-05-26 23:04:21 +0300: Memory Usage (2211196K) : Executing rule ANT.16_i_ANT.9
-2026-05-26 23:04:29 +0300: Memory Usage (2277260K) : Executing rule ANT.16_ii_ANT.9
-2026-05-26 23:04:30 +0300: Memory Usage (2277260K) : Construct connectivity for METAL2
-2026-05-26 23:04:30 +0300: Memory Usage (2235128K) : Executing rule ANT.16_i_ANT.3
-2026-05-26 23:04:43 +0300: Memory Usage (2463516K) : Executing rule ANT.16_ii_ANT.3
-2026-05-26 23:04:43 +0300: Memory Usage (2463516K) : Construct connectivity for VIA2
-2026-05-26 23:04:43 +0300: Memory Usage (2369304K) : Executing rule ANT.16_i_ANT.10
-2026-05-26 23:04:55 +0300: Memory Usage (2469064K) : Executing rule ANT.16_ii_ANT.10
-2026-05-26 23:04:56 +0300: Memory Usage (2469064K) : Construct connectivity for METAL3
-2026-05-26 23:04:57 +0300: Memory Usage (2374852K) : Executing rule ANT.16_i_ANT.4
-2026-05-26 23:05:13 +0300: Memory Usage (2685172K) : Executing rule ANT.16_ii_ANT.4
-2026-05-26 23:05:13 +0300: Memory Usage (2685172K) : Construct connectivity for VIA3
-2026-05-26 23:05:14 +0300: Memory Usage (2496752K) : Executing rule ANT.16_i_ANT.11
-2026-05-26 23:05:31 +0300: Memory Usage (2771596K) : Executing rule ANT.16_ii_ANT.11
-2026-05-26 23:05:32 +0300: Memory Usage (2771596K) : Construct connectivity for METAL4
-2026-05-26 23:05:33 +0300: Memory Usage (2583176K) : Executing rule ANT.16_i_ANT.5
-2026-05-26 23:05:58 +0300: Memory Usage (2802036K) : Executing rule ANT.16_ii_ANT.5
-2026-05-26 23:05:58 +0300: Memory Usage (2802036K) : Construct connectivity for VIA4
-2026-05-26 23:05:59 +0300: Memory Usage (2613616K) : Executing rule ANT.16_i_ANT.12
-2026-05-26 23:06:23 +0300: Memory Usage (2815248K) : Executing rule ANT.16_ii_ANT.12
-2026-05-26 23:06:23 +0300: Memory Usage (2815248K) : Construct connectivity for METAL5
-2026-05-26 23:06:24 +0300: Memory Usage (2626828K) : Executing rule ANT.16_i_ANT.6
-2026-05-26 23:06:53 +0300: Memory Usage (2721040K) : Executing rule ANT.16_ii_ANT.6
-2026-05-26 23:06:54 +0300: Memory Usage (2626828K) : Executing rule ANT.16_iii_ANT.14_MT_MIMB
-2026-05-26 23:07:23 +0300: Memory Usage (2721040K) : Antenna DRC total Run time: 219.925571682 seconds
+2026-05-27 22:05:20 +0300: Memory Usage (576944K) : Starting running GF180MCU Klayout DRC runset on /home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds
+2026-05-27 22:05:20 +0300: Memory Usage (576944K) : Ruby Version for klayout: 3.2.3
+2026-05-27 22:05:20 +0300: Memory Usage (581820K) : Loading database to memory is complete.
+2026-05-27 22:05:20 +0300: Memory Usage (581820K) : GF180MCU Klayout antenna DRC runset output at: /home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x32/antenna/gf180mcu_3v3_12t_2r2w_sram_1024x32.antenna.lyrdb
+2026-05-27 22:05:20 +0300: Memory Usage (581820K) : Evaluate switches.
+2026-05-27 22:05:20 +0300: Memory Usage (581820K) : Number of threads to use 1
+2026-05-27 22:05:20 +0300: Memory Usage (581820K) : Verbose mode: 
+2026-05-27 22:05:20 +0300: Memory Usage (581820K) : flat  mode is enabled.
+2026-05-27 22:05:20 +0300: Memory Usage (581820K) : METAL_TOP Selected is 9K
+2026-05-27 22:05:20 +0300: Memory Usage (581820K) : METAL_STACK Selected is 5LM
+2026-05-27 22:05:20 +0300: Memory Usage (581820K) : MIM Option selected: B
+2026-05-27 22:05:20 +0300: Memory Usage (581820K) : Read in polygons from layers.
+2026-05-27 22:05:21 +0300: Memory Usage (674344K) : comp has 274504 polygons
+2026-05-27 22:05:21 +0300: Memory Usage (674344K) : dualgate has 0 polygons
+2026-05-27 22:05:22 +0300: Memory Usage (713160K) : poly2 has 272059 polygons
+2026-05-27 22:05:23 +0300: Memory Usage (741920K) : nplus has 10376 polygons
+2026-05-27 22:05:23 +0300: Memory Usage (756256K) : pplus has 35014 polygons
+2026-05-27 22:05:25 +0300: Memory Usage (906424K) : contact has 1066234 polygons
+2026-05-27 22:05:28 +0300: Memory Usage (1031548K) : metal1_drawn has 707989 polygons
+2026-05-27 22:05:28 +0300: Memory Usage (1031548K) : metal1_dummy has 0 polygons
+2026-05-27 22:05:28 +0300: Memory Usage (1031548K) : metal1_label has 13295 polygons
+2026-05-27 22:05:28 +0300: Memory Usage (1031548K) : metal1_slot has 0 polygons
+2026-05-27 22:05:28 +0300: Memory Usage (1031548K) : metal1_blk has 0 polygons
+2026-05-27 22:05:28 +0300: Memory Usage (1031548K) : via1 has 14732 polygons
+2026-05-27 22:05:29 +0300: Memory Usage (1100160K) : metal2_drawn has 506108 polygons
+2026-05-27 22:05:29 +0300: Memory Usage (1100160K) : metal2_dummy has 0 polygons
+2026-05-27 22:05:29 +0300: Memory Usage (1120004K) : metal2_label has 0 polygons
+2026-05-27 22:05:29 +0300: Memory Usage (1120004K) : metal2_slot has 0 polygons
+2026-05-27 22:05:29 +0300: Memory Usage (1120004K) : metal2_blk has 0 polygons
+2026-05-27 22:05:29 +0300: Memory Usage (1120004K) : via2 has 27086 polygons
+2026-05-27 22:05:32 +0300: Memory Usage (1256540K) : metal3_drawn has 392147 polygons
+2026-05-27 22:05:32 +0300: Memory Usage (1256540K) : metal3_dummy has 0 polygons
+2026-05-27 22:05:32 +0300: Memory Usage (1256540K) : metal3_label has 0 polygons
+2026-05-27 22:05:32 +0300: Memory Usage (1256540K) : metal3_slot has 0 polygons
+2026-05-27 22:05:32 +0300: Memory Usage (1256540K) : metal3_blk has 0 polygons
+2026-05-27 22:05:32 +0300: Memory Usage (1289640K) : via3 has 394804 polygons
+2026-05-27 22:05:34 +0300: Memory Usage (1372700K) : metal4_drawn has 182586 polygons
+2026-05-27 22:05:34 +0300: Memory Usage (1372700K) : metal4_dummy has 0 polygons
+2026-05-27 22:05:34 +0300: Memory Usage (1372700K) : metal4_label has 0 polygons
+2026-05-27 22:05:34 +0300: Memory Usage (1372700K) : metal4_slot has 0 polygons
+2026-05-27 22:05:34 +0300: Memory Usage (1372700K) : metal4_blk has 0 polygons
+2026-05-27 22:05:35 +0300: Memory Usage (1391556K) : via4 has 150753 polygons
+2026-05-27 22:05:35 +0300: Memory Usage (1422888K) : metal5_drawn has 34948 polygons
+2026-05-27 22:05:35 +0300: Memory Usage (1422888K) : metal5_dummy has 0 polygons
+2026-05-27 22:05:35 +0300: Memory Usage (1422888K) : metal5_label has 0 polygons
+2026-05-27 22:05:35 +0300: Memory Usage (1422888K) : metal5_slot has 0 polygons
+2026-05-27 22:05:35 +0300: Memory Usage (1422888K) : metal5_blk has 0 polygons
+2026-05-27 22:05:35 +0300: Memory Usage (1422888K) : res_mk has 0 polygons
+2026-05-27 22:05:35 +0300: Memory Usage (1422888K) : fusetop has 0 polygons
+2026-05-27 22:05:35 +0300: Memory Usage (1422888K) : Starting GF180MCU ANTENNA layer derivations.
+2026-05-27 22:05:38 +0300: Memory Usage (1543312K) : Starting GF180MCU ANTENNA DRC rules.
+2026-05-27 22:05:38 +0300: Memory Usage (1543312K) : Construct connectivity for POLY
+2026-05-27 22:05:39 +0300: Memory Usage (1543312K) : Executing rule ANT.1
+2026-05-27 22:05:41 +0300: Memory Usage (1873332K) : Construct connectivity for CONTACT
+2026-05-27 22:05:42 +0300: Memory Usage (1811892K) : Executing rule ANT.8
+2026-05-27 22:05:47 +0300: Memory Usage (2307516K) : Construct connectivity for METAL1
+2026-05-27 22:05:48 +0300: Memory Usage (2119096K) : Executing rule ANT.16_i_ANT.2
+2026-05-27 22:05:56 +0300: Memory Usage (2320404K) : Executing rule ANT.16_ii_ANT.2
+2026-05-27 22:05:57 +0300: Memory Usage (2320404K) : Construct connectivity for VIA1
+2026-05-27 22:05:57 +0300: Memory Usage (2226192K) : Executing rule ANT.16_i_ANT.9
+2026-05-27 22:06:05 +0300: Memory Usage (2323672K) : Executing rule ANT.16_ii_ANT.9
+2026-05-27 22:06:06 +0300: Memory Usage (2323672K) : Construct connectivity for METAL2
+2026-05-27 22:06:06 +0300: Memory Usage (2245844K) : Executing rule ANT.16_i_ANT.3
+2026-05-27 22:06:17 +0300: Memory Usage (2617432K) : Executing rule ANT.16_ii_ANT.3
+2026-05-27 22:06:18 +0300: Memory Usage (2617432K) : Construct connectivity for VIA2
+2026-05-27 22:06:18 +0300: Memory Usage (2304932K) : Executing rule ANT.16_i_ANT.10
+2026-05-27 22:06:29 +0300: Memory Usage (2625112K) : Executing rule ANT.16_ii_ANT.10
+2026-05-27 22:06:30 +0300: Memory Usage (2625112K) : Construct connectivity for METAL3
+2026-05-27 22:06:30 +0300: Memory Usage (2436692K) : Executing rule ANT.16_i_ANT.4
+2026-05-27 22:06:44 +0300: Memory Usage (2942812K) : Executing rule ANT.16_ii_ANT.4
+2026-05-27 22:06:45 +0300: Memory Usage (2942812K) : Construct connectivity for VIA3
+2026-05-27 22:06:46 +0300: Memory Usage (2565976K) : Executing rule ANT.16_i_ANT.11
+2026-05-27 22:07:01 +0300: Memory Usage (3045484K) : Executing rule ANT.16_ii_ANT.11
+2026-05-27 22:07:02 +0300: Memory Usage (3045484K) : Construct connectivity for METAL4
+2026-05-27 22:07:04 +0300: Memory Usage (2668648K) : Executing rule ANT.16_i_ANT.5
+2026-05-27 22:07:23 +0300: Memory Usage (2873324K) : Executing rule ANT.16_ii_ANT.5
+2026-05-27 22:07:24 +0300: Memory Usage (2873324K) : Construct connectivity for VIA4
+2026-05-27 22:07:24 +0300: Memory Usage (2684904K) : Executing rule ANT.16_i_ANT.12
+2026-05-27 22:07:44 +0300: Memory Usage (2907632K) : Executing rule ANT.16_ii_ANT.12
+2026-05-27 22:07:45 +0300: Memory Usage (2907632K) : Construct connectivity for METAL5
+2026-05-27 22:07:46 +0300: Memory Usage (2719212K) : Executing rule ANT.16_i_ANT.6
+2026-05-27 22:08:08 +0300: Memory Usage (2907632K) : Executing rule ANT.16_ii_ANT.6
+2026-05-27 22:08:10 +0300: Memory Usage (2719212K) : Executing rule ANT.16_iii_ANT.14_MT_MIMB
+2026-05-27 22:08:32 +0300: Memory Usage (2907632K) : Antenna DRC total Run time: 192.167593043 seconds

@@ -33,9 +33,14 @@ storage checks used before macro-level LVS/PEX work.
   expanded macro GDS tops contain the array/control core, per-bit
   `precharge_sense` and `write_driver` column leaves, route cells, and the
   expected expanded wrapper dimensions.
+- `gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate.py` runs a KLayout GDS
+  geometry audit that checks row-select WL/RWL and column-periphery pin centers
+  coincide with routed shapes, rejects dummy route-cell fill/poly, and rejects
+  legacy abstract M4 WL stubs.
 - `../scripts/run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py` is the packaged
-  full local gate: Magic PEX, final abstract pin LVS, KLayout density/antenna,
-  staged LVS evidence, Avalon control binding, and packaged ngspice evidence.
+  full local gate: Magic PEX, final abstract pin LVS, pin/route alignment,
+  KLayout density/antenna, staged LVS evidence, Avalon control binding, and
+  packaged ngspice evidence.
 - `gf180mcu_3v3_12t_2r2w_sram_tile_lvs.py` checks the extracted 4x4 tile subcircuit against an
   independently generated 12T MOS reference.
 - `gf180mcu_3v3_12t_2r2w_sram_macro_lvs.py` checks the macro-top tile instance connectivity
@@ -50,10 +55,25 @@ generation, solver-grade EM/IR, or foundry signoff.
 
 ## Release LVS
 
+For the trust-oriented no-rebuild verification flow, run:
+
+```bash
+python3 verification/run_gf180mcu_3v3_12t_2r2w_sram_verification_only_flow.py
+```
+
+That orchestrator consumes the already-published GDS, reports, manifests, and
+packaged verification decks only. It refuses generator/placer/router/merge
+commands and writes one consolidated report under
+`reports/verification_only_flow/`. Use `--include-full-net-rc` only when you
+explicitly want the long all-net RC PEX characterization attempt; that mode
+fans out independent macro RC jobs through
+`verification/run_gf180mcu_3v3_12t_2r2w_sram_parallel_rc_pex.py`.
+
 To check the published extracted SPICE, run the scripts with no positional
 argument. They use the unpacked reports under `reports/`.
 
 ```bash
+python3 verification/run_gf180mcu_3v3_12t_2r2w_sram_verification_only_flow.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_lvs_gate.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_periphery_lvs.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_gds_leaf_containment.py
@@ -63,15 +83,20 @@ python3 verification/gf180mcu_3v3_12t_2r2w_sram_stdcell_gds_gate.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_row_select_gds_gate.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_stdcell_control_routing_gate.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate.py
+python3 verification/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_tile_lvs.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_macro_lvs.py
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_connectivity_check.py
 ```
 
 The packaged full local signoff report is generated under
-`reports/local_signoff_full/`. After the public GDS top-cell rewrite, the
-current full local status is `{'PASS': 36, 'WARN': 4}` with no unresolved or
-failing status entries.
+`reports/local_signoff_full/`. The current full local status is
+`{'PASS': 33, 'FAIL': 4, 'WARN': 4}`: Magic DRC, pin LVS, full-GDS no-RC
+extraction/short audit, antenna, pin/route alignment, and 512x8 VDD/VSS RC
+smoke pass; the four hard failures are the GF180 density deck reports after
+manual route-cell dummy fill/poly was removed. Density closure is intentionally
+left to a dedicated signoff fill insertion flow, not mixed into the real routing
+generators.
 
 The Netgen scripts accept `--netgen-setup`; otherwise they use
 `GF180_NETGEN_SETUP`, `NETGEN_SETUP`, or the usual `GF180_PDK_ROOT` /
@@ -93,10 +118,12 @@ The compact write-driver and precharge/sense leaves are also gated against the
 x32 tile pitch limit of `25.950um`; the current periphery gate reports
 22 pass / 0 fail. Column integration is physically present in the
 published macro GDS through the expanded-wrapper column periphery gate, which
-reports `{'PASS': 31}` with a 512x8 GF180 `main.drc` smoke report containing
-`0` violations. The packaged local signoff also consumes the full-GDS no-RC
-extraction/short audit for all four macro variants plus the 512x8 VDD/VSS RC
-smoke result.
+reports `{'PASS': 35}` with a 512x8 GF180 `main.drc` smoke report containing
+`0` violations. The pin/route alignment gate reports `{'PASS': 16}` and checks
+`13824` row-select WL/RWL points plus `3360` column-periphery route points
+against the published GDS. The packaged local signoff also consumes the
+full-GDS no-RC extraction/short audit for all four macro variants plus the
+512x8 VDD/VSS RC smoke result.
 
 The broad GDS containment audit still treats all five standalone Tim-derived
 periphery leaves as required macro children when run with

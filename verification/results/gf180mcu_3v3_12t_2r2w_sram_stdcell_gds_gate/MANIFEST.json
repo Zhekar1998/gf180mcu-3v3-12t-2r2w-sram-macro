@@ -16,7 +16,7 @@
     },
     {
       "check": "footprint unchanged",
-      "detail": "bbox={'bottom_um': 0.0, 'height_um': 340.92, 'left_um': 0.0, 'right_um': 585.56, 'top_um': 340.92, 'width_um': 585.56}",
+      "detail": "bbox={'left_um': 0.0, 'bottom_um': 0.0, 'right_um': 585.56, 'top_um': 340.92, 'width_um': 585.56, 'height_um': 340.92}",
       "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/layout/gf180mcu_3v3_12t_2r2w_sram_512x8.gds",
       "scope": "gf180mcu_3v3_12t_2r2w_sram_512x8",
       "status": "PASS"
@@ -44,7 +44,7 @@
     },
     {
       "check": "footprint unchanged",
-      "detail": "bbox={'bottom_um': 0.0, 'height_um': 618.04, 'left_um': 0.0, 'right_um': 1003.96, 'top_um': 618.04, 'width_um': 1003.96}",
+      "detail": "bbox={'left_um': 0.0, 'bottom_um': 0.0, 'right_um': 1003.96, 'top_um': 618.04, 'width_um': 1003.96, 'height_um': 618.04}",
       "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/layout/gf180mcu_3v3_12t_2r2w_sram_512x32.gds",
       "scope": "gf180mcu_3v3_12t_2r2w_sram_512x32",
       "status": "PASS"
@@ -72,7 +72,7 @@
     },
     {
       "check": "footprint unchanged",
-      "detail": "bbox={'bottom_um': 0.0, 'height_um': 618.04, 'left_um': 0.0, 'right_um': 585.56, 'top_um': 618.04, 'width_um': 585.56}",
+      "detail": "bbox={'left_um': 0.0, 'bottom_um': 0.0, 'right_um': 585.56, 'top_um': 618.04, 'width_um': 585.56, 'height_um': 618.04}",
       "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds",
       "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
       "status": "PASS"
@@ -100,7 +100,7 @@
     },
     {
       "check": "footprint unchanged",
-      "detail": "bbox={'bottom_um': 0.0, 'height_um': 1172.28, 'left_um': 0.0, 'right_um': 1003.96, 'top_um': 1172.28, 'width_um': 1003.96}",
+      "detail": "bbox={'left_um': 0.0, 'bottom_um': 0.0, 'right_um': 1003.96, 'top_um': 1172.28, 'width_um': 1003.96, 'height_um': 1172.28}",
       "evidence": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds",
       "scope": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
       "status": "PASS"

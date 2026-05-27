@@ -19,6 +19,7 @@ klayout -b -r scripts/route_gf180mcu_3v3_12t_2r2w_sram_control_signals.rb
 python3 scripts/place_gf180mcu_3v3_12t_2r2w_sram_column_periphery.py
 klayout -b -r scripts/merge_gf180mcu_3v3_12t_2r2w_sram_column_periphery_gds.rb
 python3 verification/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate.py
+python3 verification/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate.py
 python3 scripts/run_gf180mcu_3v3_12t_2r2w_sram_full_gds_lvs_pex.py --timeout-sec 900 --no-rc --out-dir reports/full_gds_lvs_pex_no_rc_all
 python3 scripts/run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py \
   --final-manifest reports/final_physical/MANIFEST.json \
@@ -42,9 +43,10 @@ Release script names in this package:
 - `route_gf180mcu_3v3_12t_2r2w_sram_control_signals.rb`
 - `place_gf180mcu_3v3_12t_2r2w_sram_column_periphery.py`
 - `merge_gf180mcu_3v3_12t_2r2w_sram_column_periphery_gds.rb`
+- `audit_gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment.rb` - KLayout GDS audit that checks row-select WL/RWL and column-periphery pin centers land on their routed shapes, rejects manual dummy fill/poly in route cells, and rejects legacy abstract M4 WL stubs.
 - `audit_gf180mcu_3v3_12t_2r2w_sram_m5_power_shorts.rb`
 - `run_gf180mcu_3v3_12t_2r2w_sram_full_gds_lvs_pex.py` - Magic extraction/PEX directly from the published GDS wrappers, with parameterized blackbox, RC, extresist, resistor tee, net filtering, and timeout controls.
-- `run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py` - mandatory packaged local gate that consumes staged LVS, physical placement/routing manifests, hierarchical Magic pin/LVS extraction, full-GDS extraction/short audit, VDD/VSS RC smoke, KLayout density/antenna, and packaged ngspice proxy evidence. Magic logs are hard-gated for `Bad Device Location`, missing-device, and node-extraction diagnostics.
+- `run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py` - mandatory packaged local gate that consumes staged LVS, physical placement/routing manifests, the pin/route alignment audit, hierarchical Magic pin/LVS extraction, full-GDS extraction/short audit, VDD/VSS RC smoke, KLayout density/antenna, and packaged ngspice proxy evidence. Magic logs are hard-gated for `Bad Device Location`, missing-device, and node-extraction diagnostics.
 
 Packaged local signoff entrypoint:
 
@@ -59,6 +61,7 @@ python3 scripts/run_gf180mcu_3v3_12t_2r2w_sram_local_signoff.py \
   --row-select-gds-manifest reports/stdcell_row_select_gds_merge/MANIFEST.json \
   --stdcell-routing-manifest reports/stdcell_control_signal_routing/MANIFEST.json \
   --column-periphery-manifest reports/column_periphery_gds_merge/MANIFEST.json \
+  --pin-route-alignment-manifest verification/results/gf180mcu_3v3_12t_2r2w_sram_pin_route_alignment_gate/MANIFEST.json \
   --full-gds-extract-manifest reports/full_gds_lvs_pex_no_rc_all/MANIFEST.json \
   --full-gds-power-rc-manifest reports/full_gds_lvs_pex_power_rc/MANIFEST.json \
   --out-dir reports/local_signoff_full \

@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "counts": {
-    "PASS": 31
+    "PASS": 35
   },
   "results": [
     {
@@ -132,9 +132,16 @@
     },
     {
       "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "check": "route cell dummy fill disabled",
+      "status": "PASS",
+      "detail": "density_fill_shapes=0",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
       "check": "M5 VDD/VSS short audit",
       "status": "PASS",
-      "detail": "short_count=0 m5_regions=4563 labels=514",
+      "detail": "short_count=0 m5_regions=4403 labels=514",
       "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate/gf180mcu_3v3_12t_2r2w_sram_512x8.m5_power_short_audit.json"
     },
     {
@@ -160,9 +167,16 @@
     },
     {
       "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "check": "route cell dummy fill disabled",
+      "status": "PASS",
+      "detail": "density_fill_shapes=0",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
       "check": "M5 VDD/VSS short audit",
       "status": "PASS",
-      "detail": "short_count=0 m5_regions=18002 labels=2050",
+      "detail": "short_count=0 m5_regions=17508 labels=2050",
       "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate/gf180mcu_3v3_12t_2r2w_sram_512x32.m5_power_short_audit.json"
     },
     {
@@ -188,9 +202,16 @@
     },
     {
       "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "check": "route cell dummy fill disabled",
+      "status": "PASS",
+      "detail": "density_fill_shapes=0",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
       "check": "M5 VDD/VSS short audit",
       "status": "PASS",
-      "detail": "short_count=0 m5_regions=9112 labels=1026",
+      "detail": "short_count=0 m5_regions=8771 labels=1026",
       "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate/gf180mcu_3v3_12t_2r2w_sram_1024x8.m5_power_short_audit.json"
     },
     {
@@ -216,9 +237,16 @@
     },
     {
       "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "check": "route cell dummy fill disabled",
+      "status": "PASS",
+      "detail": "density_fill_shapes=0",
+      "evidence": "reports/column_periphery_gds_merge/MANIFEST.json"
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
       "check": "M5 VDD/VSS short audit",
       "status": "PASS",
-      "detail": "short_count=0 m5_regions=35965 labels=4098",
+      "detail": "short_count=0 m5_regions=34948 labels=4098",
       "evidence": "verification/results/gf180mcu_3v3_12t_2r2w_sram_column_periphery_gate/gf180mcu_3v3_12t_2r2w_sram_1024x32.m5_power_short_audit.json"
     }
   ]

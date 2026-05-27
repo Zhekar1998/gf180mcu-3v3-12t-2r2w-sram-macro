@@ -1,7 +1,7 @@
 {
   "gds": "/home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/macros/gf180mcu_3v3_12t_2r2w_sram_512x32/layout/gf180mcu_3v3_12t_2r2w_sram_512x32.gds",
   "topcell": "gf180mcu_3v3_12t_2r2w_sram_512x32",
-  "m5_regions": 18002,
+  "m5_regions": 17508,
   "m5_power_labels": 2050,
   "short_count": 0,
   "shorts": [

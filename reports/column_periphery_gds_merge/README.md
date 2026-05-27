@@ -1,6 +1,6 @@
 # Column Periphery GDS Merge
 
-The published macro GDS tops are compact hybrid wrappers containing the original array/control core, per-bit read/write column leaves, route geometry, and top/bottom M5 wrapper rails. The placement consumes existing top/bottom control bands before growing the wrapper, and clears only local old density/fill keepouts under the new column leaves. Long per-leaf M5 power taps are intentionally disabled until a dedicated PDN router is added.
+The published macro GDS tops are compact hybrid wrappers containing the original array/control core, per-bit read/write column leaves, route geometry, and top/bottom M5 wrapper rails. The placement consumes existing top/bottom control bands before growing the wrapper, and clears only local old density/fill keepouts under the new column leaves. The route wrapper intentionally emits no manual dummy fill/poly; density closure belongs in a separate signoff fill step after routed connectivity is closed. Long per-leaf M5 power taps are intentionally disabled until a dedicated PDN router is added.
 
 | Macro | Status | Instances | Routes | Route shapes | New bbox |
 | --- | --- | ---: | ---: | ---: | --- |

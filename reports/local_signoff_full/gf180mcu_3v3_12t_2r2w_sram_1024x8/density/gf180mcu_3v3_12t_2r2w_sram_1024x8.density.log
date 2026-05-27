@@ -1,53 +1,53 @@
-2026-05-26 23:07:26 +0300: Memory Usage (576824K) : Starting running GF180MCU Klayout DRC runset on /home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds
-2026-05-26 23:07:26 +0300: Memory Usage (576824K) : Ruby Version for klayout: 3.2.3
-2026-05-26 23:07:26 +0300: Memory Usage (579984K) : Loading database to memory is complete.
-2026-05-26 23:07:26 +0300: Memory Usage (579984K) : GF180MCU Klayout density DRC runset output at: /home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x8/density/gf180mcu_3v3_12t_2r2w_sram_1024x8.density.lyrdb
-2026-05-26 23:07:26 +0300: Memory Usage (579984K) : Evaluate switches.
-2026-05-26 23:07:26 +0300: Memory Usage (579984K) : Number of threads to use 1
-2026-05-26 23:07:26 +0300: Memory Usage (579984K) : Verbose mode: 
-2026-05-26 23:07:26 +0300: Memory Usage (579984K) : flat  mode is enabled.
-2026-05-26 23:07:26 +0300: Memory Usage (579984K) : METAL_TOP Selected is 9K
-2026-05-26 23:07:26 +0300: Memory Usage (579984K) : METAL_STACK Selected is 5LM
-2026-05-26 23:07:26 +0300: Memory Usage (579984K) : Read in polygons from layers.
-2026-05-26 23:07:26 +0300: Memory Usage (580164K) : dualgate has 0 polygons
-2026-05-26 23:07:26 +0300: Memory Usage (598560K) : poly2 has 66602 polygons
-2026-05-26 23:07:26 +0300: Memory Usage (656616K) : contact has 287306 polygons
-2026-05-26 23:07:27 +0300: Memory Usage (686948K) : metal1_drawn has 180952 polygons
-2026-05-26 23:07:27 +0300: Memory Usage (686948K) : metal1_dummy has 1771 polygons
-2026-05-26 23:07:27 +0300: Memory Usage (702008K) : metal1_label has 7007 polygons
-2026-05-26 23:07:27 +0300: Memory Usage (702008K) : metal1_slot has 0 polygons
-2026-05-26 23:07:27 +0300: Memory Usage (702008K) : metal1_blk has 0 polygons
-2026-05-26 23:07:27 +0300: Memory Usage (702008K) : via1 has 6044 polygons
-2026-05-26 23:07:28 +0300: Memory Usage (723948K) : metal2_drawn has 127383 polygons
-2026-05-26 23:07:28 +0300: Memory Usage (723948K) : metal2_dummy has 1771 polygons
-2026-05-26 23:07:28 +0300: Memory Usage (726192K) : metal2_label has 0 polygons
-2026-05-26 23:07:28 +0300: Memory Usage (726192K) : metal2_slot has 0 polygons
-2026-05-26 23:07:28 +0300: Memory Usage (726192K) : metal2_blk has 0 polygons
-2026-05-26 23:07:28 +0300: Memory Usage (726192K) : via2 has 8668 polygons
-2026-05-26 23:07:28 +0300: Memory Usage (763348K) : metal3_drawn has 98787 polygons
-2026-05-26 23:07:28 +0300: Memory Usage (763348K) : metal3_dummy has 1771 polygons
-2026-05-26 23:07:28 +0300: Memory Usage (763348K) : metal3_label has 0 polygons
-2026-05-26 23:07:28 +0300: Memory Usage (763348K) : metal3_slot has 0 polygons
-2026-05-26 23:07:28 +0300: Memory Usage (763348K) : metal3_blk has 0 polygons
-2026-05-26 23:07:28 +0300: Memory Usage (780892K) : via3 has 98996 polygons
-2026-05-26 23:07:29 +0300: Memory Usage (797852K) : metal4_drawn has 47284 polygons
-2026-05-26 23:07:29 +0300: Memory Usage (797852K) : metal4_dummy has 1771 polygons
-2026-05-26 23:07:29 +0300: Memory Usage (797852K) : metal4_label has 0 polygons
-2026-05-26 23:07:29 +0300: Memory Usage (797852K) : metal4_slot has 0 polygons
-2026-05-26 23:07:29 +0300: Memory Usage (797852K) : metal4_blk has 0 polygons
-2026-05-26 23:07:29 +0300: Memory Usage (797852K) : via4 has 37269 polygons
-2026-05-26 23:07:29 +0300: Memory Usage (814012K) : metal5_drawn has 9112 polygons
-2026-05-26 23:07:29 +0300: Memory Usage (814012K) : metal5_dummy has 1771 polygons
-2026-05-26 23:07:29 +0300: Memory Usage (814012K) : metal5_label has 0 polygons
-2026-05-26 23:07:29 +0300: Memory Usage (814012K) : metal5_slot has 0 polygons
-2026-05-26 23:07:29 +0300: Memory Usage (814012K) : metal5_blk has 0 polygons
-2026-05-26 23:07:29 +0300: Memory Usage (814012K) : Starting GF180MCU DENSITY layer derivations.
-2026-05-26 23:07:29 +0300: Memory Usage (814012K) : Starting GF180MCU DENSITY DRC rules.
-2026-05-26 23:07:29 +0300: Memory Usage (814012K) : Executing rule PL.8
-2026-05-26 23:07:29 +0300: Memory Usage (814012K) : Executing rule M1.4
-2026-05-26 23:07:30 +0300: Memory Usage (815012K) : Executing rule M2.4
-2026-05-26 23:07:30 +0300: Memory Usage (840560K) : Executing rule M3.4
-2026-05-26 23:07:30 +0300: Memory Usage (840560K) : Executing rule M4.4
-2026-05-26 23:07:31 +0300: Memory Usage (847840K) : Executing rule M5.4
-2026-05-26 23:07:31 +0300: Memory Usage (858464K) : Executing rule MT.3
-2026-05-26 23:07:31 +0300: Memory Usage (858464K) : DRC Total Run time 5.305643 seconds
+2026-05-27 22:08:35 +0300: Memory Usage (576812K) : Starting running GF180MCU Klayout DRC runset on /home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds
+2026-05-27 22:08:35 +0300: Memory Usage (576812K) : Ruby Version for klayout: 3.2.3
+2026-05-27 22:08:35 +0300: Memory Usage (579544K) : Loading database to memory is complete.
+2026-05-27 22:08:35 +0300: Memory Usage (579544K) : GF180MCU Klayout density DRC runset output at: /home/yevhenii/gf180mcu-3v3-12t-2r2w-sram-macro/reports/local_signoff_full/gf180mcu_3v3_12t_2r2w_sram_1024x8/density/gf180mcu_3v3_12t_2r2w_sram_1024x8.density.lyrdb
+2026-05-27 22:08:35 +0300: Memory Usage (579544K) : Evaluate switches.
+2026-05-27 22:08:35 +0300: Memory Usage (579544K) : Number of threads to use 1
+2026-05-27 22:08:35 +0300: Memory Usage (579544K) : Verbose mode: 
+2026-05-27 22:08:35 +0300: Memory Usage (579544K) : flat  mode is enabled.
+2026-05-27 22:08:35 +0300: Memory Usage (579544K) : METAL_TOP Selected is 9K
+2026-05-27 22:08:35 +0300: Memory Usage (579544K) : METAL_STACK Selected is 5LM
+2026-05-27 22:08:35 +0300: Memory Usage (579544K) : Read in polygons from layers.
+2026-05-27 22:08:35 +0300: Memory Usage (579692K) : dualgate has 0 polygons
+2026-05-27 22:08:36 +0300: Memory Usage (597572K) : poly2 has 70171 polygons
+2026-05-27 22:08:36 +0300: Memory Usage (656400K) : contact has 287306 polygons
+2026-05-27 22:08:37 +0300: Memory Usage (687000K) : metal1_drawn has 180671 polygons
+2026-05-27 22:08:37 +0300: Memory Usage (687000K) : metal1_dummy has 0 polygons
+2026-05-27 22:08:37 +0300: Memory Usage (687000K) : metal1_label has 7007 polygons
+2026-05-27 22:08:37 +0300: Memory Usage (687000K) : metal1_slot has 0 polygons
+2026-05-27 22:08:37 +0300: Memory Usage (687000K) : metal1_blk has 0 polygons
+2026-05-27 22:08:37 +0300: Memory Usage (687000K) : via1 has 6044 polygons
+2026-05-27 22:08:37 +0300: Memory Usage (706380K) : metal2_drawn has 127604 polygons
+2026-05-27 22:08:37 +0300: Memory Usage (706380K) : metal2_dummy has 0 polygons
+2026-05-27 22:08:37 +0300: Memory Usage (706380K) : metal2_label has 0 polygons
+2026-05-27 22:08:37 +0300: Memory Usage (706380K) : metal2_slot has 0 polygons
+2026-05-27 22:08:37 +0300: Memory Usage (706380K) : metal2_blk has 0 polygons
+2026-05-27 22:08:37 +0300: Memory Usage (706380K) : via2 has 8668 polygons
+2026-05-27 22:08:38 +0300: Memory Usage (764916K) : metal3_drawn has 98787 polygons
+2026-05-27 22:08:38 +0300: Memory Usage (764916K) : metal3_dummy has 0 polygons
+2026-05-27 22:08:38 +0300: Memory Usage (764916K) : metal3_label has 0 polygons
+2026-05-27 22:08:38 +0300: Memory Usage (764916K) : metal3_slot has 0 polygons
+2026-05-27 22:08:38 +0300: Memory Usage (764916K) : metal3_blk has 0 polygons
+2026-05-27 22:08:38 +0300: Memory Usage (764916K) : via3 has 98996 polygons
+2026-05-27 22:08:39 +0300: Memory Usage (780120K) : metal4_drawn has 45692 polygons
+2026-05-27 22:08:39 +0300: Memory Usage (780120K) : metal4_dummy has 0 polygons
+2026-05-27 22:08:39 +0300: Memory Usage (780120K) : metal4_label has 0 polygons
+2026-05-27 22:08:39 +0300: Memory Usage (780120K) : metal4_slot has 0 polygons
+2026-05-27 22:08:39 +0300: Memory Usage (780120K) : metal4_blk has 0 polygons
+2026-05-27 22:08:39 +0300: Memory Usage (780120K) : via4 has 37969 polygons
+2026-05-27 22:08:39 +0300: Memory Usage (812264K) : metal5_drawn has 8771 polygons
+2026-05-27 22:08:39 +0300: Memory Usage (812264K) : metal5_dummy has 0 polygons
+2026-05-27 22:08:39 +0300: Memory Usage (812264K) : metal5_label has 0 polygons
+2026-05-27 22:08:39 +0300: Memory Usage (812264K) : metal5_slot has 0 polygons
+2026-05-27 22:08:39 +0300: Memory Usage (812264K) : metal5_blk has 0 polygons
+2026-05-27 22:08:39 +0300: Memory Usage (812264K) : Starting GF180MCU DENSITY layer derivations.
+2026-05-27 22:08:39 +0300: Memory Usage (812264K) : Starting GF180MCU DENSITY DRC rules.
+2026-05-27 22:08:39 +0300: Memory Usage (812264K) : Executing rule PL.8
+2026-05-27 22:08:39 +0300: Memory Usage (812264K) : Executing rule M1.4
+2026-05-27 22:08:39 +0300: Memory Usage (929556K) : Executing rule M2.4
+2026-05-27 22:08:40 +0300: Memory Usage (1008624K) : Executing rule M3.4
+2026-05-27 22:08:40 +0300: Memory Usage (1084620K) : Executing rule M4.4
+2026-05-27 22:08:41 +0300: Memory Usage (1131208K) : Executing rule M5.4
+2026-05-27 22:08:41 +0300: Memory Usage (1131208K) : Executing rule MT.3
+2026-05-27 22:08:41 +0300: Memory Usage (1131208K) : DRC Total Run time 5.423628 seconds

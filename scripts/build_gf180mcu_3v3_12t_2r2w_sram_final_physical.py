@@ -321,19 +321,9 @@ def write_top_magic(
     y0 = control_bottom
     y1 = height - control_top
 
-    # WL landing stubs at the physical row pitch.  These are pin-access tracks
-    # for the final dense row-select device strip.  Keep them isolated per port;
-    # broad blanket conductors here shorted all external control pins to the
-    # power rails during pin-LVS.
-    wl_pitch = max(1, (y1 - y0) // max(1, physical_rows))
-    stub_h = max(1, to_units(0.12))
-    lane_margin = max(1, min(to_units(0.20), max(1, port_strip_width // 5)))
-    for row in range(physical_rows):
-        y = y0 + row * wl_pitch + wl_pitch // 2
-        for idx in range(4):
-            sx0 = predecode_width + idx * port_strip_width + lane_margin
-            sx1 = predecode_width + (idx + 1) * port_strip_width - lane_margin
-            add_rect(lines, "metal4", sx0, y - stub_h, sx1, y + stub_h)
+    # Do not seed abstract WL landing stubs here.  Row-select routing must land
+    # on the actual 4x4 tile WL/RWL metal5 pins, otherwise stale M4 stubs can be
+    # mistaken for real connectivity in physical review and extraction.
 
     # Top/bottom power trunks and per-column M4 ties, same strategy as the
     # verified shell generator.
@@ -684,8 +674,8 @@ def build_one(args: argparse.Namespace, array: dict[str, Any], budget: dict[str,
         height=height,
         physical_rows=physical_rows,
         pins=pin_shapes,
-        include_density_fill=True,
-        include_drawn_poly_fill=True,
+        include_density_fill=False,
+        include_drawn_poly_fill=False,
     )
     drc_tcl = gds_magic_dir / "run_drc.tcl"
     gds_tcl = gds_magic_dir / "run_gds.tcl"

@@ -11,7 +11,9 @@
       "already_integrated": false,
       "inserted_stdcells": 1024,
       "row_select_stdcells": 1024,
-      "route_shapes_added": 6960,
+      "route_shapes_added": 7984,
+      "legacy_wl_stub_shapes_removed": 0,
+      "wl_route_policy": "row-select INV outputs route directly to real 4x4 tile WL/RWL metal5 landing pins; no abstract M4 row-center stubs",
       "expected_delta_counts": {
         "gf180mcu_as_sc_mcu7t3v3__inv_2": 768,
         "gf180mcu_as_sc_mcu7t3v3__nand4_2": 256
@@ -43,7 +45,9 @@
       "already_integrated": false,
       "inserted_stdcells": 2048,
       "row_select_stdcells": 2048,
-      "route_shapes_added": 13872,
+      "route_shapes_added": 15920,
+      "legacy_wl_stub_shapes_removed": 0,
+      "wl_route_policy": "row-select INV outputs route directly to real 4x4 tile WL/RWL metal5 landing pins; no abstract M4 row-center stubs",
       "expected_delta_counts": {
         "gf180mcu_as_sc_mcu7t3v3__inv_2": 1536,
         "gf180mcu_as_sc_mcu7t3v3__nand4_2": 512
@@ -75,7 +79,9 @@
       "already_integrated": false,
       "inserted_stdcells": 2048,
       "row_select_stdcells": 2048,
-      "route_shapes_added": 13872,
+      "route_shapes_added": 15920,
+      "legacy_wl_stub_shapes_removed": 0,
+      "wl_route_policy": "row-select INV outputs route directly to real 4x4 tile WL/RWL metal5 landing pins; no abstract M4 row-center stubs",
       "expected_delta_counts": {
         "gf180mcu_as_sc_mcu7t3v3__inv_2": 1536,
         "gf180mcu_as_sc_mcu7t3v3__nand4_2": 512
@@ -107,7 +113,9 @@
       "already_integrated": false,
       "inserted_stdcells": 4096,
       "row_select_stdcells": 4096,
-      "route_shapes_added": 27696,
+      "route_shapes_added": 31792,
+      "legacy_wl_stub_shapes_removed": 0,
+      "wl_route_policy": "row-select INV outputs route directly to real 4x4 tile WL/RWL metal5 landing pins; no abstract M4 row-center stubs",
       "expected_delta_counts": {
         "gf180mcu_as_sc_mcu7t3v3__inv_2": 3072,
         "gf180mcu_as_sc_mcu7t3v3__nand4_2": 1024

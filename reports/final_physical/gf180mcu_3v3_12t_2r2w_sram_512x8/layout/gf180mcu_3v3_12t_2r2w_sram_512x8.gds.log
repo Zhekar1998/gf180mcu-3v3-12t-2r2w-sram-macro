@@ -18,4 +18,4 @@ Processing timestamp mismatches.
 Timestamp mismatches found in these cells: detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct.
    Generating output for cell detronyx_12t_2w2r_rc4_4x4_routed_5layer_direct
    Generating output for cell gf180mcu_3v3_12t_2r2w_sram_512x8
-530 problems occurred.  See feedback entries.
+512 problems occurred.  See feedback entries.

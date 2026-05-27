@@ -1,0 +1,159 @@
+{
+  "package": "gf180mcu-3v3-12t-2r2w-sram-macro",
+  "status": "PASS",
+  "scope": "KLayout GDS audit for pin-to-route coincidence, no dummy route-cell fill, and no legacy M4 WL stubs",
+  "results": [
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x8",
+      "status": "PASS",
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_512x8/layout/gf180mcu_3v3_12t_2r2w_sram_512x8.gds",
+      "dummy_route_layer_shapes": {
+        "30/0": 0,
+        "34/4": 0,
+        "36/4": 0,
+        "42/4": 0,
+        "46/4": 0,
+        "81/4": 0
+      },
+      "dummy_route_layer_total": 0,
+      "route_layer_counts": {
+        "layout_dbu": 0.001,
+        "core_m1": 3328,
+        "core_m4": 1363,
+        "core_m5": 594,
+        "column_m3": 128,
+        "column_m4": 320,
+        "column_m5": 121
+      },
+      "legacy_m4_wl_stub_like_shapes": 0,
+      "row_select": {
+        "checked_points": 1536,
+        "missing_points": 0,
+        "missing_examples": [
+
+        ]
+      },
+      "column_periphery": {
+        "checked_points": 336,
+        "missing_points": 0,
+        "missing_examples": [
+
+        ]
+      }
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_512x32",
+      "status": "PASS",
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_512x32/layout/gf180mcu_3v3_12t_2r2w_sram_512x32.gds",
+      "dummy_route_layer_shapes": {
+        "30/0": 0,
+        "34/4": 0,
+        "36/4": 0,
+        "42/4": 0,
+        "46/4": 0,
+        "81/4": 0
+      },
+      "dummy_route_layer_total": 0,
+      "route_layer_counts": {
+        "layout_dbu": 0.001,
+        "core_m1": 6655,
+        "core_m4": 3699,
+        "core_m5": 1762,
+        "column_m3": 512,
+        "column_m4": 1280,
+        "column_m5": 498
+      },
+      "legacy_m4_wl_stub_like_shapes": 0,
+      "row_select": {
+        "checked_points": 3072,
+        "missing_points": 0,
+        "missing_examples": [
+
+        ]
+      },
+      "column_periphery": {
+        "checked_points": 1344,
+        "missing_points": 0,
+        "missing_examples": [
+
+        ]
+      }
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x8",
+      "status": "PASS",
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x8/layout/gf180mcu_3v3_12t_2r2w_sram_1024x8.gds",
+      "dummy_route_layer_shapes": {
+        "30/0": 0,
+        "34/4": 0,
+        "36/4": 0,
+        "42/4": 0,
+        "46/4": 0,
+        "81/4": 0
+      },
+      "dummy_route_layer_total": 0,
+      "route_layer_counts": {
+        "layout_dbu": 0.001,
+        "core_m1": 6655,
+        "core_m4": 2679,
+        "core_m5": 1154,
+        "column_m3": 128,
+        "column_m4": 320,
+        "column_m5": 121
+      },
+      "legacy_m4_wl_stub_like_shapes": 0,
+      "row_select": {
+        "checked_points": 3072,
+        "missing_points": 0,
+        "missing_examples": [
+
+        ]
+      },
+      "column_periphery": {
+        "checked_points": 336,
+        "missing_points": 0,
+        "missing_examples": [
+
+        ]
+      }
+    },
+    {
+      "macro": "gf180mcu_3v3_12t_2r2w_sram_1024x32",
+      "status": "PASS",
+      "gds": "macros/gf180mcu_3v3_12t_2r2w_sram_1024x32/layout/gf180mcu_3v3_12t_2r2w_sram_1024x32.gds",
+      "dummy_route_layer_shapes": {
+        "30/0": 0,
+        "34/4": 0,
+        "36/4": 0,
+        "42/4": 0,
+        "46/4": 0,
+        "81/4": 0
+      },
+      "dummy_route_layer_total": 0,
+      "route_layer_counts": {
+        "layout_dbu": 0.001,
+        "core_m1": 13312,
+        "core_m4": 7351,
+        "core_m5": 3394,
+        "column_m3": 512,
+        "column_m4": 1280,
+        "column_m5": 498
+      },
+      "legacy_m4_wl_stub_like_shapes": 0,
+      "row_select": {
+        "checked_points": 6144,
+        "missing_points": 0,
+        "missing_examples": [
+
+        ]
+      },
+      "column_periphery": {
+        "checked_points": 1344,
+        "missing_points": 0,
+        "missing_examples": [
+
+        ]
+      }
+    }
+  ]
+}
